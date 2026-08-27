@@ -1,0 +1,27 @@
+# ==============================================================================
+# Netlify Configuration File - Portfolio Hermann SIYA
+# ==============================================================================
+
+[build]
+  # Dossier à publier (racine du projet statique)
+  publish = "."
+
+# En-têtes de sécurité et d'optimisation
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+
+# Cache optimisé pour les ressources statiques
+[[headers]]
+  for = "/style.css"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, must-revalidate"
+
+[[headers]]
+  for = "/main.js"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, must-revalidate"

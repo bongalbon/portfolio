@@ -19,8 +19,10 @@
 ```text
 portfolio/
 ├── index.html       # Page principale complète et responsive
+├── 404.html         # Page d'erreur 404 personnalisée
 ├── style.css        # Styles personnalisés, animations, glassmorphism & scrollbar
 ├── main.js          # Logique d'interactivité, filtres & modal
+├── netlify.toml     # Configuration de déploiement et sécurité Netlify
 └── README.md        # Documentation du projet
 ```
 
@@ -30,7 +32,28 @@ portfolio/
 
 * **Auteur :** Hermann SIYA
 * **Formulaire de contact :** Connecté à Formspree (`https://formspree.io/f/xljrkkqy`)
-* **Hébergement cible :** GitHub Pages / Netlify
+* **Hébergement cible :** Netlify / GitHub Pages
+
+---
+
+## 🌐 Déploiement sur Netlify (Recommandé)
+
+### Option 1 : Déploiement automatique via GitHub (Recommandé)
+
+1. Connectez-vous sur [Netlify](https://app.netlify.com/).
+2. Cliquez sur **"Add new site"** > **"Import an existing project"**.
+3. Choisissez **GitHub** et autorisez l'accès à votre compte.
+4. Sélectionnez votre dépôt : `bongalbon/portfolio`.
+5. Netlify détecte automatiquement le fichier `netlify.toml` :
+   * **Branch to deploy :** `main`
+   * **Publish directory :** `.` (ou laissez vide)
+6. Cliquez sur **"Deploy portfolio"**. Votre site est en ligne en quelques secondes !
+
+### Option 2 : Déploiement instantané par Glisser-Déposer (Netlify Drop)
+
+1. Rendez-vous sur [Netlify Drop](https://app.netlify.com/drop).
+2. Glissez-déposez le dossier de votre portfolio.
+3. Le site est immédiatement déployé et opérationnel.
 
 ---
 
@@ -40,5 +63,5 @@ portfolio/
    * Rendez-vous dans **Settings** > **Pages**
    * Sous **Build and deployment** > **Branch**, sélectionnez la branche `main` et le dossier `/ (root)`
    * Cliquez sur **Save**
-2. Votre site sera automatiquement publié à l'adresse :
+2. Votre site sera publié à l'adresse :
    `https://bongalbon.github.io/portfolio/`
