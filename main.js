@@ -128,7 +128,7 @@ const projectDetailsData = {
         <li class="mb-2"><strong>Sécurité & Traçabilité :</strong> Contrôle d'accès par rôle (RBAC), journalisation complète des écritures et intégrité PostgreSQL.</li>
       </ul>`,
     techs: ["Python", "Django", "PostgreSQL", "Tailwind CSS", "Docker", "Celery"],
-    githubUrl: "https://github.com/votre-compte/gestion-municipale",
+    githubUrl: "https://github.com/bongalbon/gestion-municipale",
     demoUrl: "https://demo-municipale.example.com"
   },
   proj2: {
@@ -142,7 +142,7 @@ const projectDetailsData = {
         <li class="mb-2"><strong>Publication :</strong> Déploiement automatisé et validation sur Google Play Console.</li>
       </ul>`,
     techs: ["Flutter", "Dart", "SQLite", "Provider", "Charts Flutter", "Google Play Console"],
-    githubUrl: "https://github.com/votre-compte/smartbudget-flutter",
+    githubUrl: "https://github.com/bongalbon/smartbudget-flutter",
     demoUrl: "https://play.google.com/store/apps/details?id=com.example.smartbudget"
   },
   proj3: {
@@ -156,7 +156,7 @@ const projectDetailsData = {
         <li class="mb-2"><strong>Conformité :</strong> Modèles de rapports conformes aux normes comptables en vigueur.</li>
       </ul>`,
     techs: ["Python", "ReportLab", "Django REST Framework", "Redis", "Celery"],
-    githubUrl: "https://github.com/votre-compte/autoreport-engine",
+    githubUrl: "https://github.com/bongalbon/autoreport-engine",
     demoUrl: "#"
   },
   proj4: {
@@ -169,7 +169,7 @@ const projectDetailsData = {
         <li class="mb-2"><strong>Architecture Hybride :</strong> Interface Web moderne encapsulée dans Electron avec moteur de calcul Python/SQLite en local.</li>
       </ul>`,
     techs: ["Electron", "Python", "SQLite", "Tailwind CSS", "Chart.js"],
-    githubUrl: "https://github.com/votre-compte/audit-tresorerie-pro",
+    githubUrl: "https://github.com/bongalbon/audit-tresorerie-pro",
     demoUrl: "#"
   }
 };
@@ -409,7 +409,7 @@ function initCopyEmail() {
   copyBtns.forEach(btn => {
     btn.addEventListener('click', (e) => {
       e.preventDefault();
-      const email = btn.getAttribute('data-email') || "contact@exemple.com";
+      const email = btn.getAttribute('data-email') || "hermannsiya@gmail.com";
       
       navigator.clipboard.writeText(email).then(() => {
         showToast("Adresse e-mail copiée dans le presse-papier !");
