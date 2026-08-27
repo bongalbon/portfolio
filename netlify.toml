@@ -3,7 +3,6 @@
 # ==============================================================================
 
 [build]
-  # Dossier à publier (racine du projet statique)
   publish = "."
 
 # En-têtes de sécurité et d'optimisation
@@ -15,13 +14,18 @@
     Referrer-Policy = "strict-origin-when-cross-origin"
     Permissions-Policy = "camera=(), microphone=(), geolocation=()"
 
-# Cache optimisé pour les ressources statiques
+# Cache invalidation immédiate pour garantir la fraîcheur du code et des liens
 [[headers]]
-  for = "/style.css"
+  for = "/*.html"
   [headers.values]
-    Cache-Control = "public, max-age=31536000, must-revalidate"
+    Cache-Control = "public, max-age=0, must-revalidate"
 
 [[headers]]
-  for = "/main.js"
+  for = "/*.js"
   [headers.values]
-    Cache-Control = "public, max-age=31536000, must-revalidate"
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+[[headers]]
+  for = "/*.css"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
