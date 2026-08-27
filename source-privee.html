@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dépôt Privé & Propriété Intellectuelle | Hermann SIYA</title>
+  
+  <meta name="robots" content="noindex, nofollow" />
+  
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>" />
+
+  <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          }
+        }
+      }
+    };
+  </script>
+
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="bg-[#090d16] text-slate-200 font-sans antialiased min-h-screen flex items-center justify-center p-4 sm:p-6 relative overflow-x-hidden bg-grid-pattern">
+
+  <!-- Glows Décoratifs -->
+  <div class="fixed top-0 left-1/2 -translate-x-1/2 w-[700px] h-[400px] radial-glow pointer-events-none z-0"></div>
+  <div class="fixed bottom-0 right-0 w-[550px] h-[350px] radial-glow-emerald pointer-events-none z-0"></div>
+
+  <!-- Conteneur Principal -->
+  <main class="relative z-10 max-w-2xl w-full glass-panel p-6 sm:p-10 rounded-3xl border border-slate-800/90 shadow-2xl space-y-8 my-8">
+    
+    <!-- En-tête avec Badge Statut -->
+    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 border-b border-slate-800">
+      <div class="flex items-center gap-3.5">
+        <div class="w-12 h-12 rounded-2xl bg-amber-500/10 border border-amber-500/30 text-amber-400 flex items-center justify-center flex-shrink-0 shadow-lg shadow-amber-500/10">
+          <i data-lucide="lock" class="w-6 h-6"></i>
+        </div>
+        <div>
+          <span class="text-xs font-mono font-semibold uppercase tracking-wider text-amber-400">Dépôt Privé • Code Propriétaire</span>
+          <h1 class="text-xl sm:text-2xl font-bold text-white tracking-tight mt-0.5">Code Source Non Public</h1>
+        </div>
+      </div>
+
+      <div class="inline-flex items-center gap-2 self-start sm:self-center px-3 py-1.5 rounded-full bg-slate-900/90 border border-slate-700 text-xs font-mono text-slate-300">
+        <span class="w-2 h-2 rounded-full bg-amber-400 animate-pulse"></span>
+        <span>Accès restreint</span>
+      </div>
+    </div>
+
+    <!-- Projet Cible (Rempli dynamiquement) -->
+    <div class="p-4 rounded-2xl bg-slate-900/70 border border-slate-800 space-y-1">
+      <span class="text-xs font-mono text-slate-400">Projet concerné :</span>
+      <div id="project-title" class="text-base sm:text-lg font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-300 to-teal-300">
+        Application Métier & Architecture Sur-Mesure
+      </div>
+    </div>
+
+    <!-- Explications Professionnelles -->
+    <div class="space-y-4 text-sm sm:text-base text-slate-300 leading-relaxed">
+      <p>
+        Ce projet a été conçu pour répondre à des <strong>exigences métiers et financières spécifiques</strong>. À ce titre, son code source est maintenu sur un <strong>dépôt privé</strong> pour les raisons suivantes :
+      </p>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
+        <div class="p-3.5 rounded-xl bg-slate-900/50 border border-slate-800/80 space-y-1.5">
+          <div class="flex items-center gap-2 text-blue-400 font-semibold text-xs font-mono uppercase">
+            <i data-lucide="shield-check" class="w-4 h-4"></i>
+            <span>Propriété & Confidentialité</span>
+          </div>
+          <p class="text-xs text-slate-400">
+            Protection des règles de gestion, du savoir-faire métier et des structures de données internes.
+          </p>
+        </div>
+
+        <div class="p-3.5 rounded-xl bg-slate-900/50 border border-slate-800/80 space-y-1.5">
+          <div class="flex items-center gap-2 text-teal-400 font-semibold text-xs font-mono uppercase">
+            <i data-lucide="key-round" class="w-4 h-4"></i>
+            <span>Sécurité des Processus</span>
+          </div>
+          <p class="text-xs text-slate-400">
+            Intégration d'architectures sensibles (RBAC, flux comptables et algorithmes de rapprochement).
+          </p>
+        </div>
+      </div>
+
+      <div class="p-4 rounded-xl bg-blue-950/30 border border-blue-800/40 text-xs sm:text-sm text-blue-200 flex items-start gap-3 mt-4">
+        <i data-lucide="info" class="w-5 h-5 text-blue-400 flex-shrink-0 mt-0.5"></i>
+        <span>
+          <strong>Consultation sur demande :</strong> Des extraits de code, des schémas d'architecture ou une revue technique peuvent être partagés et détaillés lors d'un échange ou d'un entretien technique.
+        </span>
+      </div>
+    </div>
+
+    <!-- Actions & Redirections -->
+    <div class="pt-4 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-3">
+      <a href="index.html#projects" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-3 text-sm font-semibold rounded-xl bg-slate-800/90 hover:bg-slate-700 text-slate-200 border border-slate-700 transition-colors">
+        <i data-lucide="arrow-left" class="w-4 h-4"></i>
+        <span>Retour aux projets</span>
+      </a>
+
+      <a href="index.html#contact" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 text-sm font-semibold rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white shadow-lg shadow-blue-500/25 transition-all duration-200 transform hover:-translate-y-0.5">
+        <i data-lucide="mail" class="w-4 h-4"></i>
+        <span>Demander une présentation technique</span>
+      </a>
+    </div>
+
+  </main>
+
+  <script>
+    // Dictionnaire des noms de projets
+    const projectNames = {
+      'gestion-municipale': 'Application de Gestion Municipale & RH (Python / Django / PostgreSQL)',
+      'smartbudget-flutter': 'SmartBudget Mobile — Trésorerie Personnelle & PME (Flutter / Dart)',
+      'autoreport-engine': 'AutoReport Engine & Générateur PDF Haute Performance (ReportLab / REST API)',
+      'audit-tresorerie-pro': 'Suite Audit & Trésorerie Pro Desktop (Electron / Python / SQLite)'
+    };
+
+    // Récupérer le paramètre 'proj' de l'URL
+    const params = new URLSearchParams(window.location.search);
+    const projKey = params.get('proj');
+    const projectTitleEl = document.getElementById('project-title');
+
+    if (projKey && projectNames[projKey]) {
+      projectTitleEl.textContent = projectNames[projKey];
+    } else if (params.get('name')) {
+      projectTitleEl.textContent = decodeURIComponent(params.get('name'));
+    }
+
+    if (window.lucide) {
+      window.lucide.createIcons();
+    }
+  </script>
+</body>
+</html>

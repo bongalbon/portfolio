@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Accès Démo & Environnement Dédié | Hermann SIYA</title>
+  
+  <meta name="robots" content="noindex, nofollow" />
+  
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>" />
+
+  <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          }
+        }
+      }
+    };
+  </script>
+
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="bg-[#090d16] text-slate-200 font-sans antialiased min-h-screen flex items-center justify-center p-4 sm:p-6 relative overflow-x-hidden bg-grid-pattern">
+
+  <!-- Glows Décoratifs -->
+  <div class="fixed top-0 left-1/2 -translate-x-1/2 w-[700px] h-[400px] radial-glow pointer-events-none z-0"></div>
+  <div class="fixed bottom-0 right-0 w-[550px] h-[350px] radial-glow-emerald pointer-events-none z-0"></div>
+
+  <!-- Conteneur Principal -->
+  <main class="relative z-10 max-w-2xl w-full glass-panel p-6 sm:p-10 rounded-3xl border border-slate-800/90 shadow-2xl space-y-8 my-8">
+    
+    <!-- En-tête avec Badge Statut -->
+    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 border-b border-slate-800">
+      <div class="flex items-center gap-3.5">
+        <div class="w-12 h-12 rounded-2xl bg-teal-500/10 border border-teal-500/30 text-teal-400 flex items-center justify-center flex-shrink-0 shadow-lg shadow-teal-500/10">
+          <i data-lucide="server" class="w-6 h-6"></i>
+        </div>
+        <div>
+          <span class="text-xs font-mono font-semibold uppercase tracking-wider text-teal-400">Environnement Métier • Démo Contrôlée</span>
+          <h1 class="text-xl sm:text-2xl font-bold text-white tracking-tight mt-0.5">Accès Démo sur Demande</h1>
+        </div>
+      </div>
+
+      <div class="inline-flex items-center gap-2 self-start sm:self-center px-3 py-1.5 rounded-full bg-slate-900/90 border border-slate-700 text-xs font-mono text-slate-300">
+        <span class="w-2 h-2 rounded-full bg-teal-400 animate-pulse"></span>
+        <span>Sandbox Privée</span>
+      </div>
+    </div>
+
+    <!-- Projet Cible (Rempli dynamiquement) -->
+    <div class="p-4 rounded-2xl bg-slate-900/70 border border-slate-800 space-y-1">
+      <span class="text-xs font-mono text-slate-400">Application concernée :</span>
+      <div id="project-title" class="text-base sm:text-lg font-bold text-transparent bg-clip-text bg-gradient-to-r from-teal-400 via-blue-400 to-indigo-300">
+        Solution Applicative Métier
+      </div>
+    </div>
+
+    <!-- Explications Professionnelles -->
+    <div class="space-y-4 text-sm sm:text-base text-slate-300 leading-relaxed">
+      <p>
+        Cette solution fonctionne en interaction avec des <strong>bases de données relationnelles, des flux financiers et des règles d'authentification par rôles (RBAC)</strong>. Afin de garantir l'intégrité des environnements et la sécurité des données, l'accès public libre est désactivé.
+      </p>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
+        <div class="p-3.5 rounded-xl bg-slate-900/50 border border-slate-800/80 space-y-1.5">
+          <div class="flex items-center gap-2 text-teal-400 font-semibold text-xs font-mono uppercase">
+            <i data-lucide="monitor-play" class="w-4 h-4"></i>
+            <span>Démonstration Guidée</span>
+          </div>
+          <p class="text-xs text-slate-400">
+            Présentation en direct des parcours utilisateurs, des calculs de trésorerie et de l'automatisation.
+          </p>
+        </div>
+
+        <div class="p-3.5 rounded-xl bg-slate-900/50 border border-slate-800/80 space-y-1.5">
+          <div class="flex items-center gap-2 text-blue-400 font-semibold text-xs font-mono uppercase">
+            <i data-lucide="user-check" class="w-4 h-4"></i>
+            <span>Identifiants Temporaires</span>
+          </div>
+          <p class="text-xs text-slate-400">
+            Mise à disposition d'un compte de test sur environnement bac à sable (Sandbox) avec données fictives.
+          </p>
+        </div>
+      </div>
+
+      <div class="p-4 rounded-xl bg-teal-950/30 border border-teal-800/40 text-xs sm:text-sm text-teal-200 flex items-start gap-3 mt-4">
+        <i data-lucide="sparkles" class="w-5 h-5 text-teal-400 flex-shrink-0 mt-0.5"></i>
+        <span>
+          <strong>Comment organiser un test ?</strong> Vous pouvez me contacter directement via le formulaire ci-dessous ou par messagerie pour planifier une session de démonstration ou recevoir vos accès temporaires.
+        </span>
+      </div>
+    </div>
+
+    <!-- Actions & Redirections -->
+    <div class="pt-4 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-3">
+      <a href="index.html#projects" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-3 text-sm font-semibold rounded-xl bg-slate-800/90 hover:bg-slate-700 text-slate-200 border border-slate-700 transition-colors">
+        <i data-lucide="arrow-left" class="w-4 h-4"></i>
+        <span>Retour aux projets</span>
+      </a>
+
+      <a href="index.html#contact" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 text-sm font-semibold rounded-xl bg-gradient-to-r from-teal-500 to-blue-600 hover:from-teal-400 hover:to-blue-500 text-white shadow-lg shadow-teal-500/25 transition-all duration-200 transform hover:-translate-y-0.5">
+        <i data-lucide="calendar" class="w-4 h-4"></i>
+        <span>Solliciter une démo / un accès</span>
+      </a>
+    </div>
+
+  </main>
+
+  <script>
+    // Dictionnaire des noms d'applications
+    const projectNames = {
+      'gestion-municipale': 'Application de Gestion Municipale & RH (Django / PostgreSQL)',
+      'smartbudget-flutter': 'SmartBudget Mobile — Trésorerie & Budget (Flutter / SQLite)',
+      'autoreport-engine': 'AutoReport Engine & Générateur PDF Haute Performance (ReportLab / Celery)',
+      'audit-tresorerie-pro': 'Suite Audit & Trésorerie Pro Desktop (Electron / Python)'
+    };
+
+    // Récupérer le paramètre 'proj' de l'URL
+    const params = new URLSearchParams(window.location.search);
+    const projKey = params.get('proj');
+    const projectTitleEl = document.getElementById('project-title');
+
+    if (projKey && projectNames[projKey]) {
+      projectTitleEl.textContent = projectNames[projKey];
+    } else if (params.get('name')) {
+      projectTitleEl.textContent = decodeURIComponent(params.get('name'));
+    }
+
+    if (window.lucide) {
+      window.lucide.createIcons();
+    }
+  </script>
+</body>
+</html>

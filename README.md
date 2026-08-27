@@ -18,12 +18,15 @@
 
 ```text
 portfolio/
-├── index.html       # Page principale complète et responsive
-├── 404.html         # Page d'erreur 404 personnalisée
-├── style.css        # Styles personnalisés, animations, glassmorphism & scrollbar
-├── main.js          # Logique d'interactivité, filtres & modal
-├── netlify.toml     # Configuration de déploiement et sécurité Netlify
-└── README.md        # Documentation du projet
+├── index.html           # Page principale complète et responsive
+├── 404.html             # Page d'erreur 404 personnalisée
+├── source-privee.html   # Page d'information pour code source privé / propriétaire
+├── demo-acces.html      # Page d'accès et demande de démo sur environnement dédié
+├── image_portfolio.jpg  # Photo de profil professionnelle
+├── style.css            # Styles personnalisés, animations & glassmorphism
+├── main.js              # Logique d'interactivité, filtres & modal
+├── netlify.toml         # Configuration de déploiement et sécurité Netlify
+└── README.md            # Documentation du projet
 ```
 
 ---

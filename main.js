@@ -128,8 +128,8 @@ const projectDetailsData = {
         <li class="mb-2"><strong>Sécurité & Traçabilité :</strong> Contrôle d'accès par rôle (RBAC), journalisation complète des écritures et intégrité PostgreSQL.</li>
       </ul>`,
     techs: ["Python", "Django", "PostgreSQL", "Tailwind CSS", "Docker", "Celery"],
-    githubUrl: "https://github.com/bongalbon/gestion-municipale",
-    demoUrl: "https://demo-municipale.example.com"
+    githubUrl: "source-privee.html?proj=gestion-municipale",
+    demoUrl: "demo-acces.html?proj=gestion-municipale"
   },
   proj2: {
     title: "SmartBudget Mobile - Trésorerie Personnelle & PME",
@@ -142,8 +142,8 @@ const projectDetailsData = {
         <li class="mb-2"><strong>Publication :</strong> Déploiement automatisé et validation sur Google Play Console.</li>
       </ul>`,
     techs: ["Flutter", "Dart", "SQLite", "Provider", "Charts Flutter", "Google Play Console"],
-    githubUrl: "https://github.com/bongalbon/smartbudget-flutter",
-    demoUrl: "https://play.google.com/store/apps/details?id=com.example.smartbudget"
+    githubUrl: "source-privee.html?proj=smartbudget-flutter",
+    demoUrl: "demo-acces.html?proj=smartbudget-flutter"
   },
   proj3: {
     title: "AutoReport Engine & Générateur PDF",
@@ -156,8 +156,8 @@ const projectDetailsData = {
         <li class="mb-2"><strong>Conformité :</strong> Modèles de rapports conformes aux normes comptables en vigueur.</li>
       </ul>`,
     techs: ["Python", "ReportLab", "Django REST Framework", "Redis", "Celery"],
-    githubUrl: "https://github.com/bongalbon/autoreport-engine",
-    demoUrl: "#"
+    githubUrl: "source-privee.html?proj=autoreport-engine",
+    demoUrl: "demo-acces.html?proj=autoreport-engine"
   },
   proj4: {
     title: "Suite Audit & Trésorerie Pro",
@@ -169,8 +169,8 @@ const projectDetailsData = {
         <li class="mb-2"><strong>Architecture Hybride :</strong> Interface Web moderne encapsulée dans Electron avec moteur de calcul Python/SQLite en local.</li>
       </ul>`,
     techs: ["Electron", "Python", "SQLite", "Tailwind CSS", "Chart.js"],
-    githubUrl: "https://github.com/bongalbon/audit-tresorerie-pro",
-    demoUrl: "#"
+    githubUrl: "source-privee.html?proj=audit-tresorerie-pro",
+    demoUrl: "demo-acces.html?proj=audit-tresorerie-pro"
   }
 };
 
