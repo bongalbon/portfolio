@@ -14,7 +14,7 @@
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Hermann SIYA | Ingénieur Logiciel & Spécialiste Gestion" />
   <meta property="og:description" content="Conception de solutions logicielles métiers, web et mobiles à forte valeur ajoutée." />
-  <meta property="og:image" content="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1200&q=80" />
+  <meta property="og:image" content="image_portfolio.jpg" />
 
   <!-- Favicon -->
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>" />
@@ -357,47 +357,62 @@
           </div>
         </div>
 
-        <!-- Colonne Card Résumé Profil -->
+        <!-- Colonne Photo & Résumé Profil -->
         <div class="lg:col-span-5 reveal-on-scroll">
-          <div class="glass-panel rounded-2xl p-6 sm:p-8 space-y-6 border-slate-800">
-            <div class="flex items-center gap-4">
-              <div class="w-16 h-16 rounded-2xl bg-gradient-to-tr from-blue-600 to-teal-400 p-[2px] shadow-lg">
-                <div class="w-full h-full bg-slate-950 rounded-[14px] flex items-center justify-center text-2xl font-bold text-white">
-                  <!-- INITIALES OU AVATAR -->
-                  <span>💻</span>
-                </div>
-              </div>
-              <div>
-                <h3 class="text-lg font-bold text-white">Profil Hybride Rare</h3>
-                <p class="text-sm text-slate-400">Développeur & Analyste Gestionnaire</p>
-                <div class="flex items-center gap-2 mt-1">
-                  <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
-                  <span class="text-xs font-mono text-slate-300">Prêt pour vos projets</span>
+          <div class="glass-panel rounded-3xl p-5 sm:p-7 space-y-6 border border-slate-800 shadow-2xl relative overflow-hidden group">
+            
+            <!-- Glow subtil d'arrière-plan -->
+            <div class="absolute -top-24 -right-24 w-48 h-48 bg-blue-600/20 rounded-full blur-3xl pointer-events-none"></div>
+            <div class="absolute -bottom-24 -left-24 w-48 h-48 bg-teal-500/15 rounded-full blur-3xl pointer-events-none"></div>
+
+            <!-- Cadre Photo Portrait Professionnel -->
+            <div class="relative rounded-2xl overflow-hidden p-[2px] bg-gradient-to-b from-blue-500/50 via-indigo-500/30 to-teal-400/50 shadow-2xl shadow-blue-900/20">
+              <div class="relative rounded-[14px] overflow-hidden bg-slate-950 aspect-[4/5] sm:aspect-[3/4] max-h-[380px]">
+                <img 
+                  src="image_portfolio.jpg" 
+                  alt="Hermann SIYA - Ingénieur Logiciel & Spécialiste Gestion / Finance" 
+                  class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
+                  loading="lazy"
+                />
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/15 to-transparent"></div>
+                
+                <!-- Badge superposé en bas de la photo -->
+                <div class="absolute bottom-3 left-3 right-3 p-3 rounded-xl bg-slate-900/90 backdrop-blur-md border border-slate-700/70 flex items-center justify-between shadow-lg">
+                  <div>
+                    <h3 class="text-sm font-bold text-white leading-tight">Hermann SIYA</h3>
+                    <p class="text-[11px] font-mono text-teal-400">Ingénieur Logiciel & Gestion</p>
+                  </div>
+                  <div class="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-emerald-950/80 border border-emerald-500/40 text-[10px] font-mono font-semibold text-emerald-400">
+                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                    <span>Disponible</span>
+                  </div>
                 </div>
               </div>
             </div>
 
-            <div class="space-y-3 pt-2 text-sm">
-              <div class="flex justify-between py-2 border-b border-slate-800">
+            <!-- Résumé synthétique du profil -->
+            <div class="space-y-2.5 text-xs sm:text-sm">
+              <div class="flex justify-between py-2 border-b border-slate-800/80">
                 <span class="text-slate-400">Formation & Rigueur :</span>
-                <span class="text-slate-200 font-medium">Finances, Audit & Informatique</span>
+                <span class="text-slate-200 font-medium text-right">Finances, Audit & Informatique</span>
               </div>
-              <div class="flex justify-between py-2 border-b border-slate-800">
+              <div class="flex justify-between py-2 border-b border-slate-800/80">
                 <span class="text-slate-400">Écosystème Backend :</span>
-                <span class="text-slate-200 font-medium font-mono">Python, Django, PostgreSQL</span>
+                <span class="text-slate-200 font-medium font-mono text-right">Python, Django, PostgreSQL</span>
               </div>
-              <div class="flex justify-between py-2 border-b border-slate-800">
+              <div class="flex justify-between py-2 border-b border-slate-800/80">
                 <span class="text-slate-400">Écosystème Mobile :</span>
-                <span class="text-slate-200 font-medium font-mono">Flutter, React Native</span>
+                <span class="text-slate-200 font-medium font-mono text-right">Flutter, React Native</span>
               </div>
-              <div class="flex justify-between py-2 border-b border-slate-800">
+              <div class="flex justify-between py-2 border-b border-slate-800/80">
                 <span class="text-slate-400">Méthodologie :</span>
-                <span class="text-slate-200 font-medium">Agile, CI/CD, Qualité Logicielle</span>
+                <span class="text-slate-200 font-medium text-right">Agile, CI/CD, Qualité Logicielle</span>
               </div>
             </div>
 
-            <a href="#contact" class="flex items-center justify-center gap-2 w-full py-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-white text-sm font-semibold transition-colors">
-              <i data-lucide="message-square" class="w-4 h-4 text-blue-400"></i> Discuter d'un besoin spécifique
+            <a href="#contact" class="flex items-center justify-center gap-2 w-full py-3 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white text-sm font-semibold shadow-lg shadow-blue-500/25 transition-all duration-200 transform hover:-translate-y-0.5">
+              <i data-lucide="message-square" class="w-4 h-4 text-white"></i>
+              <span>Discuter d'un besoin spécifique</span>
             </a>
           </div>
         </div>
