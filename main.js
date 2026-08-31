@@ -121,8 +121,8 @@ function initProjectFilters() {
  */
 const projectDetailsData = {
   proj_budget: {
-    title: "SIGEPEC-Budget — ERP Budgétaire & Comptabilité des CTD",
-    subtitle: "Progiciel complet de gestion budgétaire, comptable et patrimoniale conforme aux instructions MINFI-MINDDEVEL",
+    title: "SIELABUC — Système d'Élaboration & Gestion Budgétaire des CTD",
+    subtitle: "Progiciel complet d'élaboration budgétaire, comptable et patrimoniale conforme aux instructions MINFI-MINDDEVEL",
     category: "Finances & Collectivités (CTD) • ERP",
     description: `Solution intégrée d'envergure conçue pour digitaliser l'ensemble de la chaîne financière des Collectivités Territoriales Décentralisées (Mairies) :
       <ul>
@@ -136,7 +136,7 @@ const projectDetailsData = {
     demoUrl: "demo-acces.html?proj=budget-ctd"
   },
   proj_grh: {
-    title: "SIGEPEC-RH & Paie — Système Intégré de GRH & Paie CTD",
+    title: "SIGEPEC — Système Intégré de Gestion du Personnel Communal & Paie",
     subtitle: "Gestion des carrières, paie institutionnelle, avancements automatiques et pointage mobile biométrique",
     category: "Finances & Collectivités (CTD) • RH & Paie",
     description: `ERP spécialisé pour l'administration communale et les organisations publiques :
