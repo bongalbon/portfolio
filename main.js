@@ -116,61 +116,141 @@ function initProjectFilters() {
 /**
  * Modal de détails de projet
  */
+/**
+ * Modal de détails de projet - Projets réels d'Hermann SIYA
+ */
 const projectDetailsData = {
-  proj1: {
-    title: "Application de Gestion Municipale & RH",
-    subtitle: "Système complet de gestion budgétaire, personnel communal et services citoyens",
-    category: "Web / Desktop • Outils Métiers",
-    description: `Cette solution sur mesure répond aux contraintes strictes des administrations locales :
+  proj_budget: {
+    title: "SIGEPEC-Budget — ERP Budgétaire & Comptabilité des CTD",
+    subtitle: "Progiciel complet de gestion budgétaire, comptable et patrimoniale conforme aux instructions MINFI-MINDDEVEL",
+    category: "Finances & Collectivités (CTD) • ERP",
+    description: `Solution intégrée d'envergure conçue pour digitaliser l'ensemble de la chaîne financière des Collectivités Territoriales Décentralisées (Mairies) :
       <ul>
-        <li class="mb-2"><strong>Gestion Budgétaire :</strong> Suivi des engagements, ordonnancements et mandatements selon la nomenclature financière.</li>
-        <li class="mb-2"><strong>Gestion des RH :</strong> Registre des agents, plannings de service, gestion des congés et états de paie.</li>
-        <li class="mb-2"><strong>Sécurité & Traçabilité :</strong> Contrôle d'accès par rôle (RBAC), journalisation complète des écritures et intégrité PostgreSQL.</li>
+        <li class="mb-2"><strong>Cadrage & Prévisions Budgétaires :</strong> Élaboration du Cadre Budgétaire à Moyen Terme (CBMT), du Cadre de Dépenses à Moyen Terme (CDMT), des Projets de Performance Annuels (PPA) et des Rapports Annuels de Performance (RAP).</li>
+        <li class="mb-2"><strong>Cycle d'Exécution Budgétaire :</strong> Gestion rigoureuse des engagements, liquidations, ordonnancements, mandatements et suivi des restes à recouvrer / restes à payer (RAR/RAP).</li>
+        <li class="mb-2"><strong>Comptabilité & Matières :</strong> Plan comptable sectoriel, inventaire physique du patrimoine, calcul automatique des amortissements (linéaires/dégressifs) et suivi de la dette communale.</li>
+        <li class="mb-2"><strong>Sécurité & Multi-Tenants :</strong> Gestion Électronique des Documents (GED), isolation par collectivité, contrôle d'accès RBAC et sauvegardes automatisées planifiées.</li>
       </ul>`,
-    techs: ["Python", "Django", "PostgreSQL", "Tailwind CSS", "Docker", "Celery"],
-    githubUrl: "source-privee.html?proj=gestion-municipale",
-    demoUrl: "demo-acces.html?proj=gestion-municipale"
+    techs: ["Python 3.12", "Django 5", "PostgreSQL", "Docker Compose", "Celery", "Electron Desktop", "ReportLab", "Bootstrap 5"],
+    githubUrl: "source-privee.html?proj=budget-ctd",
+    demoUrl: "demo-acces.html?proj=budget-ctd"
   },
-  proj2: {
-    title: "SmartBudget Mobile - Trésorerie Personnelle & PME",
-    subtitle: "Application mobile intuitive de suivi de dépenses, flux de trésorerie et prévisions",
-    category: "Mobile",
-    description: `Conçue avec Flutter pour offrir une fluidité native sur iOS et Android :
+  proj_grh: {
+    title: "SIGEPEC-RH & Paie — Système Intégré de GRH & Paie CTD",
+    subtitle: "Gestion des carrières, paie institutionnelle, avancements automatiques et pointage mobile biométrique",
+    category: "Finances & Collectivités (CTD) • RH & Paie",
+    description: `ERP spécialisé pour l'administration communale et les organisations publiques :
       <ul>
-        <li class="mb-2"><strong>Tableaux de bord dynamiques :</strong> Visualisation des postes de dépenses en temps réel via des graphiques interactifs.</li>
-        <li class="mb-2"><strong>Mode Hors-ligne :</strong> Synchronisation locale SQLite ultra-rapide avec sauvegarde chiffrée.</li>
-        <li class="mb-2"><strong>Publication :</strong> Déploiement automatisé et validation sur Google Play Console.</li>
+        <li class="mb-2"><strong>Tableau Synoptique d'Avancement :</strong> Calcul et projection automatisés des avancements d'échelons et de grades (échelle 1 à 12) tous les 2 ans avec règles de promotion.</li>
+        <li class="mb-2"><strong>Moteur de Paie Complet :</strong> Traitement des éléments fixes et variables, cotisations sociales CNPS, retenues fiscales IRPP, CAC, rappels rétroactifs et génération du fichier magnétique officiel DIPE.</li>
+        <li class="mb-2"><strong>Congés & Absences :</strong> Calcul des droits selon le Code du Travail camerounais, plannings prévisionnels, gestion des arrêts et reprises de service avec pièces jointes.</li>
+        <li class="mb-2"><strong>Pointage Mobile & Structure :</strong> Application Android dédiée pour le pointage biométrique des agents et organigramme hiérarchique dynamique.</li>
       </ul>`,
-    techs: ["Flutter", "Dart", "SQLite", "Provider", "Charts Flutter", "Google Play Console"],
-    githubUrl: "source-privee.html?proj=smartbudget-flutter",
-    demoUrl: "demo-acces.html?proj=smartbudget-flutter"
+    techs: ["Python", "Django", "PostgreSQL", "Android Mobile", "Docker", "ReportLab", "Exports Excel", "Electron"],
+    githubUrl: "source-privee.html?proj=grh-ctd",
+    demoUrl: "demo-acces.html?proj=grh-ctd"
   },
-  proj3: {
-    title: "AutoReport Engine & Générateur PDF",
-    subtitle: "Microservice d'automatisation des rapports financiers et administratifs certifiés",
-    category: "Outils Métiers",
-    description: `Génération instantanée de documents légaux et financiers complexes :
+  proj_rentpay: {
+    title: "RentPay — Solution Unifiée de Gestion & Suivi des Loyers",
+    subtitle: "Marketplace immobilière géolocalisée et plateforme de gestion locative avec paiement Mobile Money",
+    category: "Mobile (Flutter) • Fintech & Immobilier",
+    description: `Écosystème unifié comprenant une API REST centrale et deux applications mobiles Flutter indépendantes :
       <ul>
-        <li class="mb-2"><strong>Génération Haute Performance :</strong> Utilisation de ReportLab pour compiler des bilans financiers de plusieurs centaines de pages en quelques secondes.</li>
-        <li class="mb-2"><strong>Intégration API :</strong> Microservice REST consommable par n'importe quelle application tierce.</li>
-        <li class="mb-2"><strong>Conformité :</strong> Modèles de rapports conformes aux normes comptables en vigueur.</li>
+        <li class="mb-2"><strong>App Mobile Bailleur :</strong> Gestion du patrimoine immobilier, publication multi-images, suivi des baux, relances automatiques et tableau de bord des encaissements.</li>
+        <li class="mb-2"><strong>App Mobile Locataire :</strong> Recherche géolocalisée sur les 10 régions du Cameroun, filtres par budget/commune, demande de location en 1 clic et profil KYC avec CNI.</li>
+        <li class="mb-2"><strong>Paiement Mobile Money :</strong> Intégration de la passerelle CinetPay (MTN MoMo, Orange Money, Wave) avec webhooks IPN et émission automatique de quittance PDF certifiée.</li>
+        <li class="mb-2"><strong>Architecture Moderne :</strong> State management avec Riverpod 2.6, navigation GoRouter et backend unifié Django REST Framework.</li>
       </ul>`,
-    techs: ["Python", "ReportLab", "Django REST Framework", "Redis", "Celery"],
-    githubUrl: "source-privee.html?proj=autoreport-engine",
-    demoUrl: "demo-acces.html?proj=autoreport-engine"
+    techs: ["Flutter 3.5+", "Dart", "Riverpod", "Django REST Framework 5.1", "PostgreSQL Neon", "CinetPay (MoMo/Orange)", "GoRouter"],
+    githubUrl: "source-privee.html?proj=rentpay",
+    demoUrl: "demo-acces.html?proj=rentpay"
   },
-  proj4: {
-    title: "Suite Audit & Trésorerie Pro",
-    subtitle: "Application Desktop sécurisée pour analystes financiers et gestionnaires de fonds",
-    category: "Web / Desktop • Outils Métiers",
-    description: `Logiciel desktop multiplateforme alliant rapidité de calcul et ergonomie :
+  proj_tontine: {
+    title: "Tontine & Mutuelle Pro — Fintech Android Associative",
+    subtitle: "Application Android native de gestion financière, épargne, crédits et tontines rotatives",
+    category: "Mobile (Android Kotlin) • Fintech Associative",
+    description: `Application Android native de référence pour les mutuelles de solidarité et tontines communautaires :
       <ul>
-        <li class="mb-2"><strong>Calculs Avancés :</strong> Rapprochement bancaire automatisé, détection d'anomalies et ratios de liquidité.</li>
-        <li class="mb-2"><strong>Architecture Hybride :</strong> Interface Web moderne encapsulée dans Electron avec moteur de calcul Python/SQLite en local.</li>
+        <li class="mb-2"><strong>Multi-Associations & Isolation :</strong> Gestion simultanée de plusieurs associations avec isolation complète des données (Room SQLite et Cloud Firestore).</li>
+        <li class="mb-2"><strong>Matrice Stricte de Gouvernance :</strong> Séparation des pouvoirs (Président, SG, Trésorier, Censeur) avec verrouillages croisés de séance (<code>isGeneralLocked</code>, <code>isFinanceValidated</code>).</li>
+        <li class="mb-2"><strong>Épargne & Calcul Prorata Temporis :</strong> Moteur de répartition équitable des intérêts générés par les prêts aux épargnants au prorata temporis du capital épargné.</li>
+        <li class="mb-2"><strong>Grand Livre Matriciel & Prêts :</strong> Saisie rapide en séance, suivi des remboursements d'échéances et tirage automatique des cagnottes rotatives.</li>
       </ul>`,
-    techs: ["Electron", "Python", "SQLite", "Tailwind CSS", "Chart.js"],
-    githubUrl: "source-privee.html?proj=audit-tresorerie-pro",
-    demoUrl: "demo-acces.html?proj=audit-tresorerie-pro"
+    techs: ["Kotlin 2.0", "Jetpack Compose", "Material 3", "Room SQLite", "Firebase Auth", "Cloud Firestore", "MVVM Clean Arch"],
+    githubUrl: "source-privee.html?proj=gestion-tontine",
+    demoUrl: "demo-acces.html?proj=gestion-tontine"
+  },
+  proj_doc_orchestrator: {
+    title: "AI Doc Orchestrator V2 — Orchestration Multi-Agents IA",
+    subtitle: "Plateforme distribuée de traitement documentaire et de délégation de tâches par agents IA spécialisés",
+    category: "Web & Systèmes IA • Systèmes Distribués",
+    description: `Architecture distribuée haute performance pour l'automatisation et le traitement documentaire intelligent :
+      <ul>
+        <li class="mb-2"><strong>Système Multi-Agents IA :</strong> Agent coordinateur principal avec délégation automatique vers des sous-agents spécialisés via scoring de compétences.</li>
+        <li class="mb-2"><strong>File de Tâches Distribuée :</strong> Moteur asynchrone Celery + Redis avec contrôle complet (création, annulation, reprise et timeouts configurables).</li>
+        <li class="mb-2"><strong>Live Updates WebSockets :</strong> Diffusion temps réel des flux d'activité sans polling HTTP via Django Channels et tableau de bord Next.js interactif.</li>
+        <li class="mb-2"><strong>Sécurité & Audit :</strong> Traçabilité complète des actions, authentification par tokens et gestion des rôles (Manager, Operator, Viewer).</li>
+      </ul>`,
+    techs: ["Next.js (React)", "Django REST Framework", "Celery", "Redis", "Django Channels (WebSockets)", "PostgreSQL", "Docker Compose"],
+    githubUrl: "source-privee.html?proj=doc-orchestrator",
+    demoUrl: "demo-acces.html?proj=doc-orchestrator"
+  },
+  proj_nomenclator: {
+    title: "Nomenclator CTD — Intelligence Sémantique & Budgétaire",
+    subtitle: "Moteur de rapprochement et d'harmonisation comptable pour les finances publiques locales",
+    category: "Finances & Collectivités (CTD) • Intelligence Sémantique",
+    description: `Outil d'aide à la décision financière et d'harmonisation de nomenclatures pour les communes :
+      <ul>
+        <li class="mb-2"><strong>Rapprochement Sémantique Flou :</strong> Moteur basé sur RapidFuzz et regex sémantique pour retrouver instantanément la correspondance exacte d'un libellé budgétaire.</li>
+        <li class="mb-2"><strong>Harmonisation Tripartite :</strong> Conversion transparente entre l'Ancien Plan Comptable, le Nouveau Plan Comptable et la Nomenclature Fonctionnelle des CTD.</li>
+        <li class="mb-2"><strong>Heuristiques de Destination :</strong> Détection automatique du secteur d'affectation (Enseignement, Santé, Voirie, Environnement, Eau/Énergie) pour éviter toute erreur d'imputation.</li>
+        <li class="mb-2"><strong>Gain de Productivité :</strong> Réduction drastique du temps d'élaboration budgétaire et de confection du compte de gestion.</li>
+      </ul>`,
+    techs: ["Python 3.12", "Streamlit", "RapidFuzz", "Pandas", "Regex Sémantique", "Excel Engine"],
+    githubUrl: "source-privee.html?proj=nomenclator-ctd",
+    demoUrl: "demo-acces.html?proj=nomenclator-ctd"
+  },
+  proj_sauvegarde: {
+    title: "MonPlanificateurSauvegarde — Supervision & Sauvegarde Auto",
+    subtitle: "Application Desktop de planification, d'exécution et de restauration de bases de données",
+    category: "Desktop & Outils Métiers • DevOps",
+    description: `Solution Desktop autonome garantissant la pérennité et la sécurité des données applicatives d'entreprise :
+      <ul>
+        <li class="mb-2"><strong>Planification Automatisée :</strong> Gestion des fréquences de sauvegarde et synchronisation avec le Planificateur de Tâches Windows et scripts PowerShell.</li>
+        <li class="mb-2"><strong>Supervision & Alertes :</strong> Tableau de bord de suivi de l'état des archives, contrôle de la taille des sauvegardes et journalisation des logs.</li>
+        <li class="mb-2"><strong>Restauration Assistée :</strong> Procédure sécurisée en 1 clic pour restaurer des bases de données SQLite ou PostgreSQL avec vérification d'intégrité.</li>
+      </ul>`,
+    techs: ["Electron", "Python / Django", "SQLite", "PowerShell", "Batch Scripts", "Node.js"],
+    githubUrl: "source-privee.html?proj=planificateur-sauvegarde",
+    demoUrl: "demo-acces.html?proj=planificateur-sauvegarde"
+  },
+  proj_license: {
+    title: "RSA License Key Generator — Cryptographie & Protection",
+    subtitle: "Suite Desktop de génération de licences asymétriques RSA avec verrouillage matériel (HWID)",
+    category: "Desktop & Outils Métiers • Sécurité Logicielle",
+    description: `Générateur cryptographique de licences logicielles pour la distribution sécurisée d'applications propriétaires :
+      <ul>
+        <li class="mb-2"><strong>Cryptographie Asymétrique RSA :</strong> Génération de paires de clés RSA 2048/4096-bit (PEM) pour la signature numérique infalsifiable des licences.</li>
+        <li class="mb-2"><strong>Verrouillage Matériel (HWID) :</strong> Empreinte matérielle unique liant chaque licence au poste de travail client autorisé.</li>
+        <li class="mb-2"><strong>Contrôle des Modules & Expirations :</strong> Gestion des fonctionnalités activables à la carte, limitation de durée et gestion des révocations.</li>
+      </ul>`,
+    techs: ["Electron", "Python Flask", "RSA Cryptography", "PyInstaller", "Tailwind CSS", "Batch Scripts"],
+    githubUrl: "source-privee.html?proj=license-generator",
+    demoUrl: "demo-acces.html?proj=license-generator"
+  },
+  proj_cantiques: {
+    title: "DIMIS TI MI GUIZIGA — Application des Cantiques en Guiziga",
+    subtitle: "Recueil numérique et application Android de 285 cantiques et prières en langue Guiziga",
+    category: "Mobile (Android / PWA) • Culture & Langues",
+    description: `Projet patrimonial et technologique pour la préservation et la diffusion des cantiques en langue Guiziga :
+      <ul>
+        <li class="mb-2"><strong>285 Cantiques & Prières :</strong> Intégration complète avec respect strict des caractères diacritiques (<code>ɓ</code>, <code>ɗ</code>, <code>ŋ</code>, <code>Ɓ</code>, <code>Ɗ</code>).</li>
+        <li class="mb-2"><strong>Mise en Forme Liturgique :</strong> Refrains dorés mis en valeur, index alphabétique et thématique, et mode 100% hors-ligne.</li>
+        <li class="mb-2"><strong>Compilation Automatisée en 1 Clic :</strong> Pipeline de conversion USFM vers JSON et compilation automatique du bundle Play Store (.aab / .apk).</li>
+      </ul>`,
+    techs: ["Android Natif (Gradle)", "PWA HTML5/CSS3/JS", "USFM Parser", "JSON Engine", "Batch Scripts", "Google Play Store AAB"],
+    githubUrl: "source-privee.html?proj=cantiques-guiziga",
+    demoUrl: "demo-acces.html?proj=cantiques-guiziga"
   }
 };
 

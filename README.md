@@ -1,7 +1,7 @@
 # 🚀 Portfolio Professionnel — Hermann SIYA
 
-> **Ingénieur Logiciel & Spécialiste Gestion / Finance**  
-> Conception de solutions logicielles métiers, web et mobiles à forte valeur ajoutée combinant excellence technique et rigueur organisationnelle.
+> **Secrétaire Général de Mairie (Commune de Touloum) & Ingénieur Logiciel**  
+> Conception et déploiement de solutions logicielles complètes : ERP pour Collectivités Territoriales Décentralisées (CTD), Fintech mobiles (Flutter, Kotlin Jetpack Compose), architectures distribuées IA et sécurité logicielle (RSA).
 
 ---
 
