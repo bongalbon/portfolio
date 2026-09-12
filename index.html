@@ -7,7 +7,7 @@
   
   <!-- SEO Meta Tags -->
   <meta name="description" content="Portfolio de Hermann SIYA, Secrétaire Général de Mairie (Commune de Touloum) & Ingénieur Logiciel. Conception de solutions CTD (MINFI-MINDDEVEL), Fintech (Flutter, Kotlin) et Systèmes IA." />
-  <meta name="keywords" content="Hermann SIYA, Secrétaire Général Touloum, CTD Cameroun, MINFI MINDDEVEL, Ingénieur Logiciel, Python Django 5, Flutter, Kotlin Compose, Celery Redis, RentPay, SIELABUC, SIGEPEC" />
+  <meta name="keywords" content="Hermann SIYA, Secrétaire Général Touloum, CTD Cameroun, MINFI MINDDEVEL, Ingénieur Logiciel, Python Django 5, Flutter, Kotlin Compose, Celery Redis, LoyerPro, Ndjam Market Shield, RentPay, SIELABUC, SIGEPEC" />
   <meta name="author" content="Hermann SIYA" />
 
   <!-- Open Graph / Social Media -->
@@ -584,7 +584,7 @@
       <!-- Filtres Interactifs -->
       <div class="flex flex-wrap justify-center items-center gap-2.5 mb-12 reveal-on-scroll">
         <button type="button" data-filter="all" class="filter-btn px-4 py-2 text-xs sm:text-sm font-semibold rounded-xl transition-all duration-200 bg-blue-600 text-white shadow-lg shadow-blue-500/20">
-          Tous les projets (10)
+          Tous les projets (13)
         </button>
         <button type="button" data-filter="ctd" class="filter-btn px-4 py-2 text-xs sm:text-sm font-semibold rounded-xl transition-all duration-200 bg-slate-800/80 text-slate-400 hover:text-white hover:bg-slate-800 border border-slate-700/60">
           Finances & CTD (Mairies)
@@ -1035,7 +1035,157 @@
           </div>
         </div>
 
-        <!-- CARTE SPÉCIALE 10 : Conception Sur-Mesure & Conseil -->
+        <!-- PROJET 10 : LoyerPro -->
+        <div class="project-card glass-panel rounded-2xl overflow-hidden flex flex-col justify-between border-slate-800/80 hover:border-emerald-500/40 transition-all duration-300 group" data-category="mobile web metier">
+          <div>
+            <div class="relative h-48 bg-gradient-to-br from-slate-900 via-emerald-950/40 to-slate-900 flex items-center justify-center p-6 border-b border-slate-800 overflow-hidden">
+              <div class="absolute inset-0 bg-emerald-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <span class="absolute top-4 left-4 px-2.5 py-1 rounded-md text-[11px] font-mono font-medium badge-mobile">
+                PWA Mobile • Fintech & Immobilier
+              </span>
+              <div class="text-center transform group-hover:scale-105 transition-transform duration-300">
+                <i data-lucide="building-2" class="w-12 h-12 text-emerald-400 mx-auto mb-2 opacity-90"></i>
+                <span class="text-xs font-mono text-slate-400">PWA • Firestore • Quittances A4</span>
+              </div>
+            </div>
+
+            <div class="p-6 space-y-4">
+              <h3 class="text-xl font-bold text-white group-hover:text-emerald-400 transition-colors">
+                LoyerPro (Gestion Locative PWA)
+              </h3>
+              
+              <div class="space-y-2 text-sm text-slate-300">
+                <p class="font-medium text-slate-200">Problème résolu :</p>
+                <p class="text-xs text-slate-400 leading-relaxed">
+                  Pilotage multi-bailleurs, suivi des encaissements (MoMo/Espèces), coffre-fort de reçus, quittances PDF A4 hors-ligne, relances WhatsApp et dictée vocale.
+                </p>
+              </div>
+
+              <div class="flex flex-wrap gap-1.5 pt-2">
+                <span class="px-2 py-0.5 text-[11px] font-mono rounded bg-slate-800 text-emerald-300 border border-slate-700">Vanilla JS (ES6+)</span>
+                <span class="px-2 py-0.5 text-[11px] font-mono rounded bg-slate-800 text-emerald-300 border border-slate-700">Cloud Firestore</span>
+                <span class="px-2 py-0.5 text-[11px] font-mono rounded bg-slate-800 text-emerald-300 border border-slate-700">PWA Offline</span>
+                <span class="px-2 py-0.5 text-[11px] font-mono rounded bg-slate-800 text-emerald-300 border border-slate-700">html2pdf.js</span>
+                <span class="px-2 py-0.5 text-[11px] font-mono rounded bg-slate-800 text-emerald-300 border border-slate-700">Speech NLP</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-6 pt-0 border-t border-slate-800/80 mt-4 flex items-center justify-between gap-3">
+            <button type="button" data-project-id="proj_loyerpro" class="open-project-modal flex-1 inline-flex items-center justify-center gap-1.5 py-2 px-3 text-xs font-semibold rounded-lg bg-emerald-600/20 hover:bg-emerald-600/30 text-emerald-300 border border-emerald-500/30 transition-colors">
+              <i data-lucide="eye" class="w-3.5 h-3.5"></i> Détails
+            </button>
+            <a href="https://loyerpro.web.app" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center p-2 text-emerald-400 hover:text-white rounded-lg bg-emerald-600/20 hover:bg-emerald-600 border border-emerald-500/30 transition-colors" title="Accéder à LoyerPro (https://loyerpro.web.app)">
+              <i data-lucide="external-link" class="w-4 h-4"></i>
+            </a>
+            <a href="source-privee.html?proj=loyerpro" class="inline-flex items-center justify-center p-2 text-slate-400 hover:text-white rounded-lg bg-slate-800/80 hover:bg-slate-700 border border-slate-700 transition-colors" title="Dépôt Privé / Code Source">
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- PROJET 11 : Ndjam (Market Shield) -->
+        <div class="project-card glass-panel rounded-2xl overflow-hidden flex flex-col justify-between border-slate-800/80 hover:border-amber-500/40 transition-all duration-300 group" data-category="mobile web metier">
+          <div>
+            <div class="relative h-48 bg-gradient-to-br from-slate-900 via-amber-950/40 to-slate-900 flex items-center justify-center p-6 border-b border-slate-800 overflow-hidden">
+              <div class="absolute inset-0 bg-amber-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <span class="absolute top-4 left-4 px-2.5 py-1 rounded-md text-[11px] font-mono font-medium badge-mobile">
+                Mobile & PWA • Caisse & Fiscalité
+              </span>
+              <div class="text-center transform group-hover:scale-105 transition-transform duration-300">
+                <i data-lucide="shield-check" class="w-12 h-12 text-amber-400 mx-auto mb-2 opacity-90"></i>
+                <span class="text-xs font-mono text-slate-400">Android TWA • Firestore • Bouclier Fiscal</span>
+              </div>
+            </div>
+
+            <div class="p-6 space-y-4">
+              <h3 class="text-xl font-bold text-white group-hover:text-amber-400 transition-colors">
+                Ndjam (Market Shield)
+              </h3>
+              
+              <div class="space-y-2 text-sm text-slate-300">
+                <p class="font-medium text-slate-200">Problème résolu :</p>
+                <p class="text-xs text-slate-400 leading-relaxed">
+                  Caisse journalière tactile ergonomique, coffre-fort de reçus déductibles, bouclier fiscal (Loi Fiscale 2024), saisie vocale NLP et SaaS multi-tenant.
+                </p>
+              </div>
+
+              <div class="flex flex-wrap gap-1.5 pt-2">
+                <span class="px-2 py-0.5 text-[11px] font-mono rounded bg-slate-800 text-amber-300 border border-slate-700">PWA Offline</span>
+                <span class="px-2 py-0.5 text-[11px] font-mono rounded bg-slate-800 text-amber-300 border border-slate-700">Cloud Firestore</span>
+                <span class="px-2 py-0.5 text-[11px] font-mono rounded bg-slate-800 text-amber-300 border border-slate-700">Speech NLP</span>
+                <span class="px-2 py-0.5 text-[11px] font-mono rounded bg-slate-800 text-amber-300 border border-slate-700">Android TWA</span>
+                <span class="px-2 py-0.5 text-[11px] font-mono rounded bg-slate-800 text-amber-300 border border-slate-700">Google Play AAB</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-6 pt-0 border-t border-slate-800/80 mt-4 flex items-center justify-between gap-3">
+            <button type="button" data-project-id="proj_ndjam" class="open-project-modal flex-1 inline-flex items-center justify-center gap-1.5 py-2 px-3 text-xs font-semibold rounded-lg bg-amber-600/20 hover:bg-amber-600/30 text-amber-300 border border-amber-500/30 transition-colors">
+              <i data-lucide="eye" class="w-3.5 h-3.5"></i> Détails
+            </button>
+            <a href="https://ndjam-marche.web.app" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center p-2 text-amber-400 hover:text-white rounded-lg bg-amber-600/20 hover:bg-amber-600 border border-amber-500/30 transition-colors" title="Accéder à Ndjam Market Shield (https://ndjam-marche.web.app)">
+              <i data-lucide="external-link" class="w-4 h-4"></i>
+            </a>
+            <a href="source-privee.html?proj=ndjam" class="inline-flex items-center justify-center p-2 text-slate-400 hover:text-white rounded-lg bg-slate-800/80 hover:bg-slate-700 border border-slate-700 transition-colors" title="Dépôt Privé / Code Source">
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- PROJET 12 : CTD HelpCenter -->
+        <div class="project-card glass-panel rounded-2xl overflow-hidden flex flex-col justify-between border-slate-800/80 hover:border-cyan-500/40 transition-all duration-300 group" data-category="ctd web metier">
+          <div>
+            <div class="relative h-48 bg-gradient-to-br from-slate-900 via-cyan-950/40 to-slate-900 flex items-center justify-center p-6 border-b border-slate-800 overflow-hidden">
+              <div class="absolute inset-0 bg-cyan-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <span class="absolute top-4 left-4 px-2.5 py-1 rounded-md text-[11px] font-mono font-medium badge-ctd">
+                Finances & CTD • Base de Connaissances
+              </span>
+              <div class="text-center transform group-hover:scale-105 transition-transform duration-300">
+                <i data-lucide="book-open" class="w-12 h-12 text-cyan-400 mx-auto mb-2 opacity-90"></i>
+                <span class="text-xs font-mono text-slate-400">Django 5 • Docker • Recherche Multicritère</span>
+              </div>
+            </div>
+
+            <div class="p-6 space-y-4">
+              <h3 class="text-xl font-bold text-white group-hover:text-cyan-400 transition-colors">
+                CTD HelpCenter (Assistance & Docs)
+              </h3>
+              
+              <div class="space-y-2 text-sm text-slate-300">
+                <p class="font-medium text-slate-200">Problème résolu :</p>
+                <p class="text-xs text-slate-400 leading-relaxed">
+                  Centre d'assistance et base de connaissances centralisée pour les progiciels communaux (SIELABUC, SIGEPEC), recherche plein texte et gestion de guides DOCX.
+                </p>
+              </div>
+
+              <div class="flex flex-wrap gap-1.5 pt-2">
+                <span class="px-2 py-0.5 text-[11px] font-mono rounded bg-slate-800 text-cyan-300 border border-slate-700">Python 3.12</span>
+                <span class="px-2 py-0.5 text-[11px] font-mono rounded bg-slate-800 text-cyan-300 border border-slate-700">Django 5</span>
+                <span class="px-2 py-0.5 text-[11px] font-mono rounded bg-slate-800 text-cyan-300 border border-slate-700">PostgreSQL</span>
+                <span class="px-2 py-0.5 text-[11px] font-mono rounded bg-slate-800 text-cyan-300 border border-slate-700">Docker</span>
+                <span class="px-2 py-0.5 text-[11px] font-mono rounded bg-slate-800 text-cyan-300 border border-slate-700">WhiteNoise</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-6 pt-0 border-t border-slate-800/80 mt-4 flex items-center justify-between gap-3">
+            <button type="button" data-project-id="proj_helper" class="open-project-modal flex-1 inline-flex items-center justify-center gap-1.5 py-2 px-3 text-xs font-semibold rounded-lg bg-cyan-600/20 hover:bg-cyan-600/30 text-cyan-300 border border-cyan-500/30 transition-colors">
+              <i data-lucide="eye" class="w-3.5 h-3.5"></i> Détails
+            </button>
+            <a href="source-privee.html?proj=helper-ctd" class="inline-flex items-center justify-center p-2 text-slate-400 hover:text-white rounded-lg bg-slate-800/80 hover:bg-slate-700 border border-slate-700 transition-colors" title="Dépôt Privé / Code Source">
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- CARTE SPÉCIALE 13 : Conception Sur-Mesure & Conseil -->
         <div class="project-card card-bespoke rounded-2xl overflow-hidden flex flex-col justify-between transition-all duration-300 group" data-category="ctd mobile ai-web desktop metier">
           <div>
             <div class="relative h-48 bg-gradient-to-br from-blue-950/60 via-indigo-950/60 to-slate-950 flex items-center justify-center p-6 border-b border-blue-500/20 overflow-hidden">

@@ -251,6 +251,51 @@ const projectDetailsData = {
     techs: ["Android Natif (Gradle)", "PWA HTML5/CSS3/JS", "USFM Parser", "JSON Engine", "Batch Scripts", "Google Play Store AAB"],
     githubUrl: "source-privee.html?proj=cantiques-guiziga",
     demoUrl: "demo-acces.html?proj=cantiques-guiziga"
+  },
+  proj_loyerpro: {
+    title: "LoyerPro — Application PWA de Gestion Locative & Bailleurs",
+    subtitle: "Progressive Web App multi-bailleurs de gestion locative, quittances officielles PDF A4 et coffre-fort de preuves",
+    category: "Mobile & PWA • Fintech & Immobilier",
+    description: `Solution complète conçue pour permettre aux bailleurs et gestionnaires immobiliers de piloter leur patrimoine :
+      <ul>
+        <li class="mb-2"><strong>Recouvrement & Caisse en Direct :</strong> Indicateurs instantanés de loyers perçus, attendus, impayés et taux d'occupation avec filtres temporels et synthèse vocale audio du bilan.</li>
+        <li class="mb-2"><strong>Patrimoine & Fiches Locataires :</strong> Gestion multi-bâtiments (immeubles, appartements, studios, commerces), suivi des cautions, dates d'échéances et relance WhatsApp courtoise pré-remplie en 1 clic.</li>
+        <li class="mb-2"><strong>Coffre-fort des Preuves & Quittances A4 :</strong> Numérisation et compression WebP des reçus Mobile Money (MTN MoMo, Orange Money), génération 100% hors-ligne de quittances officielles PDF A4 (<code>html2pdf.js</code>) et partage instantané.</li>
+        <li class="mb-2"><strong>Assistant Vocal & Multi-Tenants :</strong> Enregistrement des encaissements par dictée vocale, synchronisation temps réel Cloud Firestore et mode Offline-First garanti.</li>
+      </ul>`,
+    techs: ["Vanilla JS (ES6+)", "Cloud Firestore", "Firebase Auth", "PWA (Service Worker)", "html2pdf.js", "Web Speech API", "Web Share API", "CSS HSL Variables"],
+    githubUrl: "source-privee.html?proj=loyerpro",
+    demoUrl: "https://loyerpro.web.app"
+  },
+  proj_ndjam: {
+    title: "Ndjam (Market Shield) — Plateforme SaaS & Bouclier Fiscal pour Commerçants",
+    subtitle: "Progressive Web App & Application Android TWA de caisse journalière, coffre-fort de reçus et conformité fiscale",
+    category: "Mobile & PWA • Commerce & Fiscalité Locale",
+    description: `Solution terrain conçue pour les commerçants, grossistes et exploitants de marchés au Cameroun et en Afrique :
+      <ul>
+        <li class="mb-2"><strong>Caisse du Jour & Ergonomie Marché :</strong> Solde net, entrées et dépenses en temps réel, grands boutons tactiles 64px pour encaissement rapide sans erreur et synthèse vocale de clôture journalière.</li>
+        <li class="mb-2"><strong>Assistante Vocale & NLP :</strong> Saisie rapide en langage naturel (<em>« Vente 5 000 »</em>, <em>« Achat 2 sacs de riz 30 000 »</em>) avec extraction automatique du montant, de la nature et de la catégorie.</li>
+        <li class="mb-2"><strong>Coffre-fort Numérique & Bouclier Fiscal 2024 :</strong> Numérisation instantanée des tickets de régie municipale et factures grossistes, calcul automatique des charges déductibles et édition d'attestations fiscales officielles certifiées.</li>
+        <li class="mb-2"><strong>Android & SaaS Multi-Tenant :</strong> Espaces commerçants 100% cloisonnés, génération automatique de monogrammes/logos d'enseignes et paquets de production officiels signés RSA (<code>ndjam-pro.aab</code> et <code>ndjam-pro.apk</code>) prêts pour le Google Play Store.</li>
+      </ul>`,
+    techs: ["Vanilla JS Modules", "Cloud Firestore", "Firebase Auth", "Android TWA / Gradle", "Web Speech NLP", "HTML5 Canvas", "Play Store AAB/APK", "PWA Offline"],
+    githubUrl: "source-privee.html?proj=ndjam",
+    demoUrl: "https://ndjam-marche.web.app"
+  },
+  proj_helper: {
+    title: "CTD HelpCenter — Centre d'Assistance & Documentation Communale",
+    subtitle: "Plateforme centralisée de gestion de base de connaissances, documentation technique et assistance aux progiciels des CTD",
+    category: "Finances & Collectivités (CTD) • Documentation & Support",
+    description: `Centre d'assistance et base de connaissances intégrée pour accompagner les équipes municipales dans l'usage des progiciels métiers :
+      <ul>
+        <li class="mb-2"><strong>Base de Connaissances Hiérarchique :</strong> Structuration des articles d'aide par application cliente (SIELABUC, SIGEPEC, Nomenclator) et par rubriques fonctionnelles.</li>
+        <li class="mb-2"><strong>Recherche Transversale & Filtres Multiples :</strong> Moteur de recherche plein texte sur les titres, contenus, applications et catégories pour un accès instantané aux procédures administratives.</li>
+        <li class="mb-2"><strong>Gestion Documentaire Intégrée :</strong> Téléversement, hébergement et consultation de fiches guides aux formats DOCX et PDF.</li>
+        <li class="mb-2"><strong>Architecture Conteneurisée :</strong> Déploiement Dockerisé au sein du réseau communal <code>ctd_reseau_commun</code> avec PostgreSQL 17, Gunicorn et service de fichiers statiques optimisé via WhiteNoise.</li>
+      </ul>`,
+    techs: ["Python 3.12", "Django 5", "PostgreSQL", "Docker Compose", "Gunicorn", "WhiteNoise", "Bootstrap 5", "Jazzmin Admin"],
+    githubUrl: "source-privee.html?proj=helper-ctd",
+    demoUrl: "demo-acces.html?proj=helper-ctd"
   }
 };
 
@@ -284,6 +329,18 @@ function initProjectModal() {
 
     modalGithub.setAttribute('href', data.githubUrl);
     modalDemo.setAttribute('href', data.demoUrl);
+
+    // Gérer l'accès direct si URL externe
+    const demoSpan = modalDemo.querySelector('span');
+    if (data.demoUrl && data.demoUrl.startsWith('http')) {
+      modalDemo.setAttribute('target', '_blank');
+      modalDemo.setAttribute('rel', 'noopener noreferrer');
+      if (demoSpan) demoSpan.textContent = "Accéder à l'application";
+    } else {
+      modalDemo.removeAttribute('target');
+      modalDemo.removeAttribute('rel');
+      if (demoSpan) demoSpan.textContent = "Accès Démo / Sandbox";
+    }
 
     modal.classList.remove('hidden');
     document.body.classList.add('overflow-hidden');
