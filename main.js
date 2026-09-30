@@ -48,17 +48,22 @@ function initMobileMenu() {
   if (!menuBtn || !mobileMenu) return;
 
   function openMenu() {
+    menuBtn.setAttribute('aria-expanded', 'true');
     mobileMenu.classList.remove('translate-x-full');
     backdrop?.classList.remove('opacity-0', 'pointer-events-none');
     document.body.classList.add('overflow-hidden');
   }
 
   function closeMenu() {
+    menuBtn.setAttribute('aria-expanded', 'false');
     mobileMenu.classList.add('translate-x-full');
     backdrop?.classList.add('opacity-0', 'pointer-events-none');
     document.body.classList.remove('overflow-hidden');
   }
 
+  menuBtn.setAttribute('aria-expanded', 'false');
+  menuBtn.setAttribute('aria-controls', 'mobile-menu');
+  document.addEventListener('keydown', event => { if (event.key === 'Escape') closeMenu(); });
   menuBtn.addEventListener('click', openMenu);
   closeBtn?.addEventListener('click', closeMenu);
   backdrop?.addEventListener('click', closeMenu);
@@ -91,23 +96,10 @@ function initProjectFilters() {
 
       const filterValue = button.getAttribute('data-filter');
 
+      filterButtons.forEach(btn => btn.setAttribute('aria-pressed', String(btn === button)));
       projectCards.forEach(card => {
         const categories = card.getAttribute('data-category')?.split(' ') || [];
-        
-        if (filterValue === 'all' || categories.includes(filterValue)) {
-          card.classList.remove('is-hidden');
-          // Animation douce
-          setTimeout(() => {
-            card.style.opacity = '1';
-            card.style.transform = 'scale(1)';
-          }, 50);
-        } else {
-          card.style.opacity = '0';
-          card.style.transform = 'scale(0.95)';
-          setTimeout(() => {
-            card.classList.add('is-hidden');
-          }, 250);
-        }
+        card.classList.toggle('is-hidden', filterValue !== 'all' && !categories.includes(filterValue));
       });
     });
   });
@@ -121,7 +113,7 @@ function initProjectFilters() {
  */
 const projectDetailsData = {
   proj_budget: {
-    title: "SIELABUC — Système d'Élaboration & Gestion Budgétaire des CTD",
+    title: "Budget CTD / SIELABUC — Système d'Élaboration & Gestion Budgétaire des CTD",
     subtitle: "Progiciel complet d'élaboration budgétaire, comptable et patrimoniale conforme aux instructions MINFI-MINDDEVEL",
     category: "Finances & Collectivités (CTD) • ERP",
     description: `Solution intégrée d'envergure conçue pour digitaliser l'ensemble de la chaîne financière des Collectivités Territoriales Décentralisées (Mairies) :
@@ -133,7 +125,7 @@ const projectDetailsData = {
       </ul>`,
     techs: ["Python 3.12", "Django 5", "PostgreSQL", "Docker Compose", "Celery", "Electron Desktop", "ReportLab", "Bootstrap 5"],
     githubUrl: "source-privee.html?proj=budget-ctd",
-    demoUrl: "demo-acces.html?proj=budget-ctd"
+    demoUrl: "https://budgetctd.online"
   },
   proj_grh: {
     title: "SIGEPEC — Système Intégré de Gestion du Personnel Communal & Paie",

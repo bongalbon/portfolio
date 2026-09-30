@@ -64,10 +64,12 @@
   <script src="https://unpkg.com/lucide@latest"></script>
 
   <!-- Custom Stylesheet -->
-  <link rel="stylesheet" href="style.css?v=2" />
+  <link rel="stylesheet" href="style.css?v=3" />
 </head>
 
 <body class="bg-[#090d16] text-slate-200 font-sans antialiased selection:bg-blue-500 selection:text-white relative overflow-x-hidden min-h-screen bg-grid-pattern">
+
+  <a class="skip-link" href="#hero">Aller au contenu principal</a>
 
   <!-- Glow Décoratif Arrière-plan -->
   <div class="fixed top-0 left-1/2 -translate-x-1/2 w-[800px] h-[450px] radial-glow pointer-events-none z-0"></div>
@@ -162,119 +164,40 @@
   <!-- =========================================================================
        2. HERO SECTION (ACCUEIL)
        ========================================================================= -->
-  <section id="hero" class="relative pt-36 pb-20 md:pt-44 md:pb-28 lg:pt-48 lg:pb-36 z-10">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-        
-        <!-- Colonne Texte & CTA -->
-        <div class="lg:col-span-7 space-y-8 reveal-on-scroll">
-          
-          <!-- Badge Statut -->
-          <div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-slate-900/90 border border-slate-700/80 shadow-inner">
-            <span class="relative flex h-2.5 w-2.5">
-              <span class="animate-pulse-slow absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-              <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
-            </span>
-            <span class="text-xs font-mono font-medium text-emerald-400">Disponible pour opportunités & missions de consulting</span>
-          </div>
-
-          <!-- Titre Principal -->
-          <div class="space-y-3">
-            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight">
-              Ingénieur Logiciel & <br />
-              <span class="gradient-text-primary">Secrétaire Général de Mairie</span>
-            </h1>
-            <p class="text-lg sm:text-xl text-slate-300 leading-relaxed max-w-2xl font-light">
-              Secrétaire Général de la Commune de Touloum & Ingénieur Logiciel. Je conçois et déploie des <strong>solutions logicielles métiers, web, mobiles et IA</strong> à haute valeur ajoutée, alliant <span class="text-blue-400 font-medium">excellence technologique</span> et <span class="text-teal-400 font-medium">expertise des finances publiques & CTD</span>.
-            </p>
-          </div>
-
-          <!-- Boutons d'Action (CTAs) -->
-          <div class="flex flex-wrap items-center gap-4 pt-2">
-            <a href="#projects" class="inline-flex items-center gap-2.5 px-6 py-3.5 text-base font-semibold text-white bg-blue-600 hover:bg-blue-500 rounded-xl shadow-lg shadow-blue-600/25 hover:shadow-blue-600/40 transition-all duration-200 transform hover:-translate-y-0.5">
-              <i data-lucide="layers" class="w-5 h-5"></i>
-              <span>Explorer mes solutions numériques</span>
-            </a>
-
-            <a href="#contact" class="inline-flex items-center gap-2.5 px-6 py-3.5 text-base font-semibold text-slate-200 bg-slate-800/90 hover:bg-slate-700/90 border border-slate-700/80 hover:border-slate-600 rounded-xl shadow-sm transition-all duration-200 transform hover:-translate-y-0.5">
-              <i data-lucide="mail" class="w-5 h-5 text-teal-400"></i>
-              <span>Me contacter / Étude sur-mesure</span>
-            </a>
-          </div>
-
-            <!-- Liens Réseaux Sociaux & Accès Rapide -->
-            <div class="pt-4 flex items-center gap-6 text-slate-400 border-t border-slate-800/80">
-              <span class="text-xs uppercase tracking-wider font-mono text-slate-500 font-semibold">Profils Pro :</span>
-              
-              <a href="https://github.com/bongalbon" target="_blank" rel="noopener noreferrer" aria-label="Profil GitHub" class="p-2 rounded-lg bg-slate-900/60 border border-slate-800 hover:text-white hover:border-slate-600 transition-all hover:scale-110 flex items-center justify-center">
-                <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
-                </svg>
-              </a>
-              <a href="https://www.linkedin.com/in/hermann-siya-89507b11b?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener noreferrer" aria-label="Profil LinkedIn" class="p-2 rounded-lg bg-slate-900/60 border border-slate-800 hover:text-blue-400 hover:border-blue-500/40 transition-all hover:scale-110 flex items-center justify-center">
-                <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
-                  <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.2V10.9H6.46M7.83 6.2a1.64 1.64 0 1 0 0 3.28 1.64 1.64 0 0 0 0-3.28z"/>
-                </svg>
-              </a>
-              <a href="https://t.me/Bongalbon" target="_blank" rel="noopener noreferrer" aria-label="Telegram" class="p-2 rounded-lg bg-slate-900/60 border border-slate-800 hover:text-sky-400 hover:border-sky-500/40 transition-all hover:scale-110">
-                <i data-lucide="send" class="w-5 h-5"></i>
-              </a>
-              <button type="button" data-email="hermannsiya@gmail.com" aria-label="Copier l'adresse email" class="copy-email-btn p-2 rounded-lg bg-slate-900/60 border border-slate-800 hover:text-emerald-400 hover:border-emerald-500/40 transition-all hover:scale-110" title="Copier hermannsiya@gmail.com">
-                <i data-lucide="mail" class="w-5 h-5"></i>
-              </button>
-            </div>
+  <section id="hero" class="modern-hero">
+    <div class="hero-layout">
+      <div class="hero-copy">
+        <span class="eyebrow"><span class="status-dot"></span> HERMANN SIYA · INGÉNIERIE & GOUVERNANCE</span>
+        <h1>Du terrain.<br />Du code.<br /><span>De l’impact.</span></h1>
+        <p class="hero-intro">Je transforme les enjeux métiers en <strong>solutions numériques concrètes.</strong> Des finances publiques à la gestion locative, je conçois des outils qui simplifient le quotidien.</p>
+        <div class="hero-actions">
+          <a class="primary-action" href="#live-apps">Découvrir mes SaaS <i data-lucide="arrow-up-right" aria-hidden="true"></i></a>
+          <a class="secondary-action" href="#contact">Parlons de votre projet <i data-lucide="arrow-right" aria-hidden="true"></i></a>
         </div>
-
-        <!-- Colonne Card Visuelle & Chiffres Clés -->
-        <div class="lg:col-span-5 reveal-on-scroll">
-          <div class="relative">
-            <!-- Glow subtil derrière la carte -->
-            <div class="absolute -inset-1 bg-gradient-to-r from-blue-600 to-teal-500 rounded-3xl blur-xl opacity-30 group-hover:opacity-100 transition duration-1000 group-hover:duration-200"></div>
-
-            <div class="relative glass-panel rounded-2xl p-6 sm:p-8 space-y-6">
-              <div class="flex items-center justify-between pb-4 border-b border-slate-800">
-                <div class="flex items-center gap-3">
-                  <div class="w-3 h-3 rounded-full bg-red-500"></div>
-                  <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
-                  <div class="w-3 h-3 rounded-full bg-green-500"></div>
-                </div>
-                <span class="text-xs font-mono text-slate-400">~/profile/architecture.json</span>
-              </div>
-
-              <!-- Bloc Code Stylisé / Double Compétence -->
-              <div class="font-mono text-xs sm:text-sm text-slate-300 space-y-2 bg-slate-950/80 p-4 rounded-xl border border-slate-800">
-                <p><span class="text-purple-400">const</span> <span class="text-blue-300">expertProfile</span> = {</p>
-                <p class="pl-4"><span class="text-slate-400">role_actuel:</span> <span class="text-emerald-400">"SG de Mairie (Commune de Touloum)"</span>,</p>
-                <p class="pl-4"><span class="text-slate-400">expertise_ctd:</span> <span class="text-teal-300">"Finances Publiques, CDMT/CBMT & GRH"</span>,</p>
-                <p class="pl-4"><span class="text-slate-400">backend_ia:</span> [<span class="text-amber-300">"Python/Django"</span>, <span class="text-amber-300">"Celery/Redis"</span>, <span class="text-amber-300">"Docker"</span>],</p>
-                <p class="pl-4"><span class="text-slate-400">mobile_app:</span> [<span class="text-amber-300">"Flutter"</span>, <span class="text-amber-300">"Kotlin (Compose)"</span>],</p>
-                <p class="pl-4"><span class="text-slate-400">desktop:</span> [<span class="text-amber-300">"Electron"</span>, <span class="text-amber-300">"RSA Cryptography"</span>],</p>
-                <p class="pl-4"><span class="text-slate-400">impact:</span> <span class="text-blue-400">"Transformation Numérique & Automatisation"</span></p>
-                <p>};</p>
-              </div>
-
-              <!-- Grille Métriques Clés -->
-              <div class="grid grid-cols-2 gap-4 pt-2">
-                <div class="p-4 rounded-xl bg-slate-900/60 border border-slate-800">
-                  <div class="text-2xl sm:text-3xl font-extrabold text-blue-400 font-mono">100%</div>
-                  <div class="text-xs text-slate-400 mt-1">Conformité & Intégrité Données</div>
-                </div>
-                <div class="p-4 rounded-xl bg-slate-900/60 border border-slate-800">
-                  <div class="text-2xl sm:text-3xl font-extrabold text-teal-400 font-mono">Multi</div>
-                  <div class="text-xs text-slate-400 mt-1">Plateformes Web, Mobile & Desktop</div>
-                </div>
-              </div>
-
-              <!-- Mini Feature Bar -->
-              <div class="flex items-center gap-3 p-3 rounded-lg bg-blue-950/30 border border-blue-800/40 text-xs text-blue-300">
-                <i data-lucide="shield-check" class="w-5 h-5 text-blue-400 flex-shrink-0"></i>
-                <span>Applications testées, conteneurisées (Docker) et orientées sécurité métier.</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
+        <div class="hero-disciplines"><span>Finances publiques & CTD</span><span>Web & Mobile</span><span>Intelligence artificielle</span></div>
       </div>
+      <div class="portrait-composition">
+        <div class="portrait-frame"><img src="image_portfolio.jpg" alt="Hermann SIYA, ingénieur logiciel et Secrétaire Général de la Commune de Touloum" fetchpriority="high" /></div>
+        <div class="portrait-label"><span class="status-dot"></span> Disponible pour vos projets</div>
+        <div class="identity-card"><span class="eyebrow">UNE DOUBLE EXPERTISE</span><strong>Comprendre le métier.<br />Construire la solution.</strong><p>Secrétaire Général de la Commune de Touloum<br />& Ingénieur Logiciel</p></div>
+      </div>
+    </div>
+  </section>
+  <section id="live-apps" class="live-section" aria-labelledby="live-title">
+    <div class="live-heading"><div><span class="eyebrow">DU CODE AUX PRODUITS</span><h2 id="live-title">Mes solutions en ligne<span>.</span></h2></div><a href="#projects">Toutes les réalisations <i data-lucide="arrow-right" aria-hidden="true"></i></a></div>
+    <div class="live-grid">
+      <a class="live-card budget-live" href="https://budgetctd.online" target="_blank" rel="noopener noreferrer" aria-label="Ouvrir Budget CTD en ligne dans un nouvel onglet">
+        <div class="live-card-top"><span class="app-mark"><i data-lucide="landmark" aria-hidden="true"></i></span><span class="live-badge"><span class="status-dot"></span> SaaS en ligne</span></div>
+        <span class="eyebrow">FINANCES PUBLIQUES · COLLECTIVITÉS</span><h3>Budget CTD</h3><p>L’élaboration et la gestion budgétaire des collectivités, réunies dans une solution accessible en ligne.</p>
+        <div class="app-capabilities"><span>Budget</span><span>Gestion communale</span><span>SIELABUC</span></div>
+        <div class="live-card-bottom"><span>budgetctd.online</span><strong>Ouvrir l’application <i data-lucide="arrow-up-right" aria-hidden="true"></i></strong></div>
+      </a>
+      <a class="live-card loyer-live" href="https://loyerpro.web.app" target="_blank" rel="noopener noreferrer" aria-label="Ouvrir LoyerPro en ligne dans un nouvel onglet">
+        <div class="live-card-top"><span class="app-mark"><i data-lucide="house" aria-hidden="true"></i></span><span class="live-badge"><span class="status-dot"></span> Application en ligne</span></div>
+        <span class="eyebrow">IMMOBILIER · GESTION LOCATIVE</span><h3>LoyerPro</h3><p>Une gestion locative plus fluide : biens, locataires, loyers et suivi des encaissements au même endroit.</p>
+        <div class="app-capabilities"><span>Multi-bailleurs</span><span>Suivi des loyers</span><span>Web & PWA</span></div>
+        <div class="live-card-bottom"><span>loyerpro.web.app</span><strong>Ouvrir l’application <i data-lucide="arrow-up-right" aria-hidden="true"></i></strong></div>
+      </a>
     </div>
   </section>
 
@@ -619,7 +542,7 @@
 
             <div class="p-6 space-y-4">
               <h3 class="text-xl font-bold text-white group-hover:text-blue-400 transition-colors">
-                SIELABUC (ERP Budgétaire CTD)
+                Budget CTD · SIELABUC
               </h3>
               
               <div class="space-y-2 text-sm text-slate-300">
@@ -643,6 +566,7 @@
             <button type="button" data-project-id="proj_budget" class="open-project-modal flex-1 inline-flex items-center justify-center gap-1.5 py-2 px-3 text-xs font-semibold rounded-lg bg-blue-600/20 hover:bg-blue-600/30 text-blue-300 border border-blue-500/30 transition-colors">
               <i data-lucide="eye" class="w-3.5 h-3.5"></i> Détails
             </button>
+            <a href="https://budgetctd.online" target="_blank" rel="noopener noreferrer" class="portfolio-app-link" aria-label="Ouvrir Budget CTD en ligne (nouvel onglet)">Ouvrir le SaaS <i data-lucide="arrow-up-right" aria-hidden="true"></i></a>
             <a href="source-privee.html?proj=budget-ctd" class="inline-flex items-center justify-center p-2 text-slate-400 hover:text-white rounded-lg bg-slate-800/80 hover:bg-slate-700 border border-slate-700 transition-colors" title="Dépôt Privé / Code Source">
               <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
@@ -1385,7 +1309,7 @@
         <div class="text-center md:text-left space-y-1">
           <div class="text-lg font-bold text-white">Hermann SIYA</div>
           <p class="text-xs text-slate-400">
-            Ingénieur Logiciel & Spécialiste Gestion • Conçu avec Tailwind CSS, Lucide & Vanilla JS.
+            Ingénieur Logiciel & Spécialiste Gestion • Des solutions pensées pour le terrain.
           </p>
         </div>
 
@@ -1470,6 +1394,6 @@
 
 
   <!-- Script JS Principal -->
-  <script src="main.js?v=2"></script>
+  <script src="main.js?v=3"></script>
 </body>
 </html>
