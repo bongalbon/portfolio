@@ -196,9 +196,10 @@ a, button { -webkit-tap-highlight-color: transparent; }
 .live-heading h2 { font-size: clamp(28px, 3.3vw, 42px); font-weight: 700; letter-spacing: -.045em; color: #f3f6fa; margin-top: 8px; }
 .live-heading h2 span { color: var(--mint); }
 .live-heading a { display: inline-flex; align-items: center; gap: 12px; color: #aab8c5; font-size: 12px; padding-bottom: 8px; }
-.live-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.live-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
 .live-card { display: block; padding: 32px; border: 1px solid #ffffff16; border-radius: 24px; transition: transform .25s, border-color .25s; }
 .budget-live { background: radial-gradient(ellipse at top right, #34578244, transparent 65%), #111a25; }
+.grh-live { background: radial-gradient(ellipse at top right, #287d7744, transparent 65%), #111f22; }
 .loyer-live { background: radial-gradient(ellipse at top right, #32685a44, transparent 65%), #111f20; }
 .live-card:hover { transform: translateY(-5px); border-color: #a6f1cd70; }
 .live-card-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 32px; gap: 16px; }

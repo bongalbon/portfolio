@@ -140,7 +140,7 @@ const projectDetailsData = {
       </ul>`,
     techs: ["Python", "Django", "PostgreSQL", "Android Mobile", "Docker", "ReportLab", "Exports Excel", "Electron"],
     githubUrl: "source-privee.html?proj=grh-ctd",
-    demoUrl: "demo-acces.html?proj=grh-ctd"
+    demoUrl: "https://grhctd.online"
   },
   proj_rentpay: {
     title: "RentPay — Solution Unifiée de Gestion & Suivi des Loyers",
