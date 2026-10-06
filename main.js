@@ -232,17 +232,17 @@ const projectDetailsData = {
   },
   proj_cantiques: {
     title: "DIMIS TI MI GUIZIGA — Application des Cantiques en Guiziga",
-    subtitle: "Recueil numérique et application Android de 285 cantiques et prières en langue Guiziga",
+    subtitle: "Recueil numérique et application Android officielle sur Google Play de 285 cantiques et prières en langue Guiziga",
     category: "Mobile (Android / PWA) • Culture & Langues",
     description: `Projet patrimonial et technologique pour la préservation et la diffusion des cantiques en langue Guiziga :
       <ul>
         <li class="mb-2"><strong>285 Cantiques & Prières :</strong> Intégration complète avec respect strict des caractères diacritiques (<code>ɓ</code>, <code>ɗ</code>, <code>ŋ</code>, <code>Ɓ</code>, <code>Ɗ</code>).</li>
         <li class="mb-2"><strong>Mise en Forme Liturgique :</strong> Refrains dorés mis en valeur, index alphabétique et thématique, et mode 100% hors-ligne.</li>
-        <li class="mb-2"><strong>Compilation Automatisée en 1 Clic :</strong> Pipeline de conversion USFM vers JSON et compilation automatique du bundle Play Store (.aab / .apk).</li>
+        <li class="mb-2"><strong>Publication Google Play Store :</strong> Pipeline de conversion USFM vers JSON, compilation automatisée du bundle Play Store (.aab / .apk) et distribution publique sur le Play Store officiel.</li>
       </ul>`,
-    techs: ["Android Natif (Gradle)", "PWA HTML5/CSS3/JS", "USFM Parser", "JSON Engine", "Batch Scripts", "Google Play Store AAB"],
+    techs: ["Google Play Store", "Android Natif (Gradle)", "PWA HTML5/CSS3/JS", "USFM Parser", "JSON Engine", "Batch Scripts"],
     githubUrl: "source-privee.html?proj=cantiques-guiziga",
-    demoUrl: "demo-acces.html?proj=cantiques-guiziga"
+    demoUrl: "https://play.google.com/store/apps/details?id=com.siyahermann.cantiquesguiziga"
   },
   proj_loyerpro: {
     title: "LoyerPro — Application PWA de Gestion Locative & Bailleurs",
@@ -327,7 +327,11 @@ function initProjectModal() {
     if (data.demoUrl && data.demoUrl.startsWith('http')) {
       modalDemo.setAttribute('target', '_blank');
       modalDemo.setAttribute('rel', 'noopener noreferrer');
-      if (demoSpan) demoSpan.textContent = "Accéder à l'application";
+      if (data.demoUrl.includes('play.google.com')) {
+        if (demoSpan) demoSpan.textContent = "Télécharger sur Google Play";
+      } else {
+        if (demoSpan) demoSpan.textContent = "Accéder à l'application";
+      }
     } else {
       modalDemo.removeAttribute('target');
       modalDemo.removeAttribute('rel');
