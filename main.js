@@ -100,6 +100,7 @@ function initProjectFilters() {
       projectCards.forEach(card => {
         const categories = card.getAttribute('data-category')?.split(' ') || [];
         card.classList.toggle('is-hidden', filterValue !== 'all' && !categories.includes(filterValue));
+        if (!card.classList.contains('is-hidden')) animateEntrance(card);
       });
     });
   });
@@ -307,7 +308,7 @@ function initProjectModal() {
 
   function openModal(projectId) {
     const data = projectDetailsData[projectId];
-    if (!data) return;
+    if (!Object.hasOwn(projectDetailsData, projectId)) return;
 
     modalTitle.textContent = data.title;
     modalSubtitle.textContent = data.subtitle;
@@ -315,9 +316,12 @@ function initProjectModal() {
     modalDescription.innerHTML = data.description;
 
     // Remplir les technologies
-    modalTechList.innerHTML = data.techs
-      .map(t => `<span class="px-2.5 py-1 text-xs font-mono font-medium rounded-md bg-blue-950/60 text-blue-300 border border-blue-800/40">${t}</span>`)
-      .join('');
+    modalTechList.replaceChildren(...data.techs.map(tech => {
+      const badge = document.createElement('span');
+      badge.className = 'px-2.5 py-1 text-xs font-mono font-medium rounded-md bg-blue-950/60 text-blue-300 border border-blue-800/40';
+      badge.textContent = tech;
+      return badge;
+    }));
 
     modalGithub.setAttribute('href', data.githubUrl);
     modalDemo.setAttribute('href', data.demoUrl);
@@ -419,7 +423,7 @@ function initBackToTop() {
   backToTopBtn.addEventListener('click', () => {
     window.scrollTo({
       top: 0,
-      behavior: 'smooth'
+      behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth'
     });
   });
 }
@@ -428,22 +432,49 @@ function initBackToTop() {
  * Scroll Reveal via Intersection Observer
  */
 function initScrollReveal() {
-  const elements = document.querySelectorAll('.reveal-on-scroll');
-  if (!elements.length) return;
+  const elements = document.querySelectorAll('.reveal-on-scroll, .live-card, .project-card, .live-heading');
+  const motionPreference = window.matchMedia('(prefers-reduced-motion: reduce)');
+  if (motionPreference.matches || !('IntersectionObserver' in window)) return;
+
+  document.querySelectorAll('.hero-copy > *, .portrait-composition').forEach((el, index) => {
+    animateEntrance(el, Math.min(index * 85, 340));
+  });
 
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add('is-revealed');
+        animateEntrance(entry.target);
         observer.unobserve(entry.target);
       }
     });
   }, {
-    threshold: 0.12,
-    rootMargin: '0px 0px -40px 0px'
+    threshold: 0.08
   });
 
   elements.forEach(el => observer.observe(el));
+  motionPreference.addEventListener('change', event => {
+    if (event.matches) {
+      observer.disconnect();
+      elements.forEach(el => el.getAnimations?.().forEach(animation => animation.cancel()));
+      document.querySelectorAll('.hero-copy > *, .portrait-composition').forEach(el => {
+        el.getAnimations?.().forEach(animation => animation.cancel());
+      });
+    }
+  });
+}
+
+// Le contenu reste visible sans JavaScript ou sans prise en charge des animations.
+function animateEntrance(element, delay = 0) {
+  if (!element.animate || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  element.getAnimations().forEach(animation => {
+    if (animation.id === 'portfolio-entrance') animation.cancel();
+  });
+  const animation = element.animate([
+    { opacity: 0, translate: '0 22px' },
+    { opacity: 1, translate: '0 0' }
+  ], { duration: 650, delay, easing: 'cubic-bezier(.16, 1, .3, 1)', fill: 'backwards' });
+  animation.id = 'portfolio-entrance';
 }
 
 /**
@@ -454,10 +485,12 @@ function initContactForm() {
   const submitBtn = document.getElementById('form-submit-btn');
   const statusMsg = document.getElementById('form-status-msg');
 
-  if (!form) return;
+  if (!form || !submitBtn) return;
+  let statusTimeout;
 
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
+    if (submitBtn.disabled || !form.reportValidity()) return;
 
     const originalBtnText = submitBtn.innerHTML;
     submitBtn.disabled = true;
@@ -473,18 +506,6 @@ function initContactForm() {
     const formAction = form.getAttribute('action');
 
     try {
-      // Si l'URL contient encore le placeholder, afficher un message d'information pour le test
-      if (formAction.includes('YOUR_FORM_ID')) {
-        setTimeout(() => {
-          showStatus('Message simulé avec succès ! (Pensez à remplacer YOUR_FORM_ID par votre identifiant Formspree).', 'success');
-          form.reset();
-          submitBtn.disabled = false;
-          submitBtn.innerHTML = originalBtnText;
-          if (window.lucide) window.lucide.createIcons();
-        }, 1000);
-        return;
-      }
-
       const response = await fetch(formAction, {
         method: 'POST',
         body: formData,
@@ -498,7 +519,7 @@ function initContactForm() {
         form.reset();
       } else {
         const errorData = await response.json();
-        const msg = errorData.errors ? errorData.errors.map(err => err.message).join(', ') : "Une erreur est survenue lors de l'envoi.";
+        const msg = Array.isArray(errorData.errors) ? errorData.errors.map(err => String(err.message || '')).join(', ') : "Une erreur est survenue lors de l'envoi.";
         showStatus(msg, 'error');
       }
     } catch (err) {
@@ -516,15 +537,13 @@ function initContactForm() {
     
     if (type === 'success') {
       statusMsg.classList.add('text-emerald-400', 'bg-emerald-950/40', 'border-emerald-800/50');
-      statusMsg.innerHTML = `<i data-lucide="check-circle" class="w-4 h-4 mr-2 inline"></i> ${text}`;
     } else {
       statusMsg.classList.add('text-rose-400', 'bg-rose-950/40', 'border-rose-800/50');
-      statusMsg.innerHTML = `<i data-lucide="alert-circle" class="w-4 h-4 mr-2 inline"></i> ${text}`;
     }
 
-    if (window.lucide) window.lucide.createIcons();
-
-    setTimeout(() => {
+    statusMsg.textContent = text;
+    clearTimeout(statusTimeout);
+    statusTimeout = setTimeout(() => {
       statusMsg.classList.add('hidden');
     }, 8000);
   }

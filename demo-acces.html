@@ -2,6 +2,7 @@
 <html lang="fr" class="scroll-smooth">
 <head>
   <meta charset="UTF-8" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src https://formspree.io; form-action https://formspree.io; base-uri 'none'; object-src 'none'" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Accès Démo & Environnement Dédié | Hermann SIYA</title>
   
@@ -14,24 +15,11 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
 
-  <!-- Tailwind CSS CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      darkMode: 'class',
-      theme: {
-        extend: {
-          fontFamily: {
-            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
-            mono: ['"JetBrains Mono"', 'monospace'],
-          }
-        }
-      }
-    };
-  </script>
+  <!-- CSS compilé localement : aucun compilateur exécuté chez le visiteur -->
+  <link rel="stylesheet" href="assets/tailwind.css" />
 
-  <!-- Lucide Icons CDN -->
-  <script src="https://unpkg.com/lucide@latest"></script>
+  <!-- Lucide 0.468.0, copie locale -->
+  <script src="assets/lucide.min.js"></script>
 
   <!-- Custom Stylesheet -->
   <link rel="stylesheet" href="style.css" />
@@ -49,7 +37,7 @@
     <!-- En-tête avec Badge Statut -->
     <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 border-b border-slate-800">
       <div class="flex items-center gap-3.5">
-        <div class="w-12 h-12 rounded-2xl bg-teal-500/10 border border-teal-500/30 text-teal-400 flex items-center justify-center flex-shrink-0 shadow-lg shadow-teal-500/10">
+        <div class="w-12 h-12 rounded-2xl bg-teal-500/10 border border-teal-500/30 text-teal-400 flex items-center justify-center shrink-0 shadow-lg shadow-teal-500/10">
           <i data-lucide="server" class="w-6 h-6"></i>
         </div>
         <div>
@@ -67,7 +55,7 @@
     <!-- Projet Cible (Rempli dynamiquement) -->
     <div class="p-4 rounded-2xl bg-slate-900/70 border border-slate-800 space-y-1">
       <span class="text-xs font-mono text-slate-400">Application concernée :</span>
-      <div id="project-title" class="text-base sm:text-lg font-bold text-transparent bg-clip-text bg-gradient-to-r from-teal-400 via-blue-400 to-indigo-300">
+      <div id="project-title" class="text-base sm:text-lg font-bold text-transparent bg-clip-text bg-linear-to-r from-teal-400 via-blue-400 to-indigo-300">
         Solution Applicative Métier
       </div>
     </div>
@@ -101,7 +89,7 @@
       </div>
 
       <div class="p-4 rounded-xl bg-teal-950/30 border border-teal-800/40 text-xs sm:text-sm text-teal-200 flex items-start gap-3 mt-4">
-        <i data-lucide="sparkles" class="w-5 h-5 text-teal-400 flex-shrink-0 mt-0.5"></i>
+        <i data-lucide="sparkles" class="w-5 h-5 text-teal-400 shrink-0 mt-0.5"></i>
         <span>
           <strong>Comment organiser un test ?</strong> Vous pouvez me contacter directement via le formulaire ci-dessous ou par messagerie pour planifier une session de démonstration ou recevoir vos accès temporaires.
         </span>
@@ -115,7 +103,7 @@
         <span>Retour aux projets</span>
       </a>
 
-      <a href="index.html#contact" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 text-sm font-semibold rounded-xl bg-gradient-to-r from-teal-500 to-blue-600 hover:from-teal-400 hover:to-blue-500 text-white shadow-lg shadow-teal-500/25 transition-all duration-200 transform hover:-translate-y-0.5">
+      <a href="index.html#contact" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 text-sm font-semibold rounded-xl bg-linear-to-r from-teal-500 to-blue-600 hover:from-teal-400 hover:to-blue-500 text-white shadow-lg shadow-teal-500/25 transition-all duration-200 transform hover:-translate-y-0.5">
         <i data-lucide="calendar" class="w-4 h-4"></i>
         <span>Solliciter une démo / un accès</span>
       </a>
@@ -123,38 +111,6 @@
 
   </main>
 
-  <script>
-    // Dictionnaire des noms d'applications réelles
-    const projectNames = {
-      'budget-ctd': 'SIELABUC — Système d\'Élaboration & Gestion Budgétaire des CTD (Instruction MINFI-MINDDEVEL)',
-      'grh-ctd': 'SIGEPEC — Système Intégré de Gestion du Personnel Communal & Paie',
-      'rentpay': 'RentPay — Marketplace & Gestion Locative Immobilière (Flutter / MoMo)',
-      'gestion-tontine': 'Tontine & Mutuelle Pro — Fintech Android Associative & Épargne',
-      'doc-orchestrator': 'AI Doc Orchestrator V2 — Plateforme Multi-Agents IA Distribuée',
-      'nomenclator-ctd': 'Nomenclator CTD — Intelligence Sémantique & Budgétaire CTD',
-      'planificateur-sauvegarde': 'MonPlanificateurSauvegarde — Supervision & Sauvegarde Automatique',
-      'license-generator': 'RSA License Key Generator — Cryptographie & Protection Logicielle',
-      'cantiques-guiziga': 'DIMIS TI MI GUIZIGA — Application Android des Cantiques en Guiziga',
-      'loyerpro': 'LoyerPro — Application PWA de Gestion Locative & Suivi Multi-Bailleurs',
-      'ndjam': 'Ndjam (Market Shield) — Plateforme SaaS & Bouclier Fiscal pour Commerçants',
-      'helper-ctd': 'CTD HelpCenter — Centre d\'Assistance & Documentation des Progiciels CTD',
-      'sur-mesure': 'Conception & Ingénierie Logicielle Sur-Mesure'
-    };
-
-    // Récupérer le paramètre 'proj' de l'URL
-    const params = new URLSearchParams(window.location.search);
-    const projKey = params.get('proj');
-    const projectTitleEl = document.getElementById('project-title');
-
-    if (projKey && projectNames[projKey]) {
-      projectTitleEl.textContent = projectNames[projKey];
-    } else if (params.get('name')) {
-      projectTitleEl.textContent = decodeURIComponent(params.get('name'));
-    }
-
-    if (window.lucide) {
-      window.lucide.createIcons();
-    }
-  </script>
+  <script src="assets/demo-acces-page.js"></script>
 </body>
 </html>

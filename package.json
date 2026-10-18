@@ -1,0 +1,14 @@
+{
+  "name": "hermann-siya-portfolio",
+  "private": true,
+  "scripts": {
+    "build": "node scripts/build.cjs",
+    "test": "node --test tests/security.test.cjs"
+  },
+  "devDependencies": {
+    "@tailwindcss/node": "4.3.3",
+    "@tailwindcss/oxide": "4.3.3",
+    "lucide": "0.468.0",
+    "tailwindcss": "4.3.3"
+  }
+}
